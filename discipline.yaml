@@ -1,0 +1,37 @@
+id: semantos
+name: Semantos
+version: 0.1.0
+status: building
+description: >-
+  Discipline generated from the Semantos hackathon submission codebase.
+purpose: >-
+  Understand the Semantos architecture, codebase, product model, implementation details,
+  operational assumptions, and opportunities for extension or integration.
+sourceRepository: https://github.com/todriguez/hackaton-submission
+sourceAuthority: source-snapshot
+qmdCollections:
+  - id: semantos-discipline
+    role: source
+    path: sources
+    includeByDefault: false
+  - id: semantos-discipline-artifacts
+    role: artifacts
+    path: artifacts
+    includeByDefault: false
+selectedCollections:
+  - collectionId: semantos-discipline-artifacts
+    role: primary
+    label: Distilled Semantos discipline artifacts
+  - collectionId: semantos-discipline
+    role: source
+    label: Semantos source markdown snapshots
+useWhen:
+  - The turn is about Semantos, the hackathon submission, or its source repository.
+  - The agent needs architecture, implementation, code-navigation, product, or operational context for Semantos.
+  - A Shad run or workflow is building, validating, or updating the Semantos discipline.
+avoidWhen:
+  - The turn is unrelated to Semantos or the hackathon submission codebase.
+  - A narrower task-specific discipline is available and more relevant.
+artifacts: []
+createdAt: "$(date -Iseconds)"
+updatedAt: "$(date -Iseconds)"
