@@ -1,0 +1,447 @@
+# Source Map
+
+## Roots
+- `/home/jake/.edwinpai/disciplines/semantos/sources-code` @ `7877ddbe35770abaffabf6829f9057102aa40e4f`
+
+## Corpus Summary
+- Files: 4164
+- Bytes: 35876581
+
+## Extension Counts
+- `.md`: 4164
+
+## Top Directories
+- `runtime`: 1177
+- `cartridges`: 791
+- `core`: 762
+- `packages`: 488
+- `apps`: 264
+- `platforms`: 137
+- `proofs`: 123
+- `tests`: 102
+- `esp32-hackkit`: 84
+- `tools`: 70
+- `scripts`: 47
+- `db`: 40
+- `src`: 33
+- `.`: 14
+- `configs`: 14
+- `infra`: 8
+- `.github`: 6
+- `.changeset`: 1
+- `.semantos`: 1
+- `include`: 1
+- `systemd`: 1
+
+## Important Files
+- `apps/loom-svelte/package.json.md`
+- `apps/oddjobtodd/package.json.md`
+- `apps/semantos/pubspec.yaml.md`
+- `cartridges/betterment/brain/package.json.md`
+- `cartridges/bsv-anchor-bundle/brain/package.json.md`
+- `cartridges/chess/web/package.json.md`
+- `cartridges/jambox/mobile/pubspec.yaml.md`
+- `cartridges/jambox/web/package.json.md`
+- `cartridges/oddjobz/brain/package.json.md`
+- `cartridges/oddjobz/experience/pubspec.yaml.md`
+- `cartridges/scg/brain/package.json.md`
+- `cartridges/tessera/brain/package.json.md`
+- `cartridges/wallet-headers/brain/package.json.md`
+- `core/anchor-attestation/package.json.md`
+- `core/cell-engine/bindings/package.json.md`
+- `core/cell-engine/package.json.md`
+- `core/cell-ops/package.json.md`
+- `core/constants/package.json.md`
+- `core/contact-book/package.json.md`
+- `core/conversation-graph/package.json.md`
+- `core/cube-object/package.json.md`
+- `core/experience-cartridge/package.json.md`
+- `core/hrr/package.json.md`
+- `core/identity-ports/package.json.md`
+- `core/lexicon-core/package.json.md`
+- `core/pask/bindings/ts/package.json.md`
+- `core/plexus-contracts/package.json.md`
+- `core/plexus-schema-registry/package.json.md`
+- `core/plexus-vendor-sdk/package.json.md`
+- `core/protocol-types/package.json.md`
+- `core/scg-relations/package.json.md`
+- `core/semantic-objects/package.json.md`
+- `core/semantos-ir/package.json.md`
+- `core/semantos-sir/package.json.md`
+- `core/state/package.json.md`
+- `docker-compose.yml.md`
+- `infra/pravega/docker-compose.yml.md`
+- `package-lock.json.md`
+- `package.json.md`
+- `packages/betterment_experience/pubspec.yaml.md`
+- `packages/calendar/package.json.md`
+- `packages/cartridge_sdk/pubspec.yaml.md`
+- `packages/cdm/cdm/package.json.md`
+- `packages/cell-relay/package.json.md`
+- `packages/chain-broadcast/chain-broadcast/package.json.md`
+- `packages/content-store-local-fs/package.json.md`
+- `packages/content-store-uhrp-http/package.json.md`
+- `packages/content-store-usb-cdn/package.json.md`
+- `packages/dispatch/dispatch/package.json.md`
+- `packages/extraction/package.json.md`
+- `packages/game-sdk/package.json.md`
+- `packages/games/package.json.md`
+- `packages/metering/metering/package.json.md`
+- `packages/navigator/package.json.md`
+- `packages/pask-ga/package.json.md`
+- `packages/pask-vault-notion/pask-vault-notion/package.json.md`
+- `packages/pask-vault-obsidian/pask-vault-obsidian/package.json.md`
+- `packages/policy-runtime/package.json.md`
+- `packages/re-desk-stub/package.json.md`
+- `packages/recovery/recovery/package.json.md`
+- `packages/scada/scada/package.json.md`
+- `platforms/flutter/llama_cpp/android/build.gradle.md`
+- `platforms/flutter/llama_cpp/pubspec.yaml.md`
+- `platforms/flutter/semantos_core/pubspec.yaml.md`
+- `platforms/flutter/semantos_demo/pubspec.yaml.md`
+- `platforms/flutter/semantos_ffi/android/build.gradle.md`
+- `platforms/flutter/semantos_ffi/pubspec.yaml.md`
+- `platforms/flutter/semantos_shell_native_identity/pubspec.yaml.md`
+- `platforms/flutter/whisper_cpp/android/build.gradle.md`
+- `platforms/flutter/whisper_cpp/pubspec.yaml.md`
+- `pnpm-lock.yaml.md`
+- `runtime/hrr-library/package.json.md`
+- `runtime/intent/package.json.md`
+- `runtime/legacy-ingest/package.json.md`
+- `runtime/node/package.json.md`
+- `runtime/peer-locator/package.json.md`
+- `runtime/semantos-brain/deploy/docker/docker-compose.yml.md`
+- `runtime/services/package.json.md`
+- `runtime/session-protocol/package.json.md`
+- `runtime/shell/package.json.md`
+
+## Formal / Spec Assets
+- None detected
+
+## Documentation Files
+- `.changeset/config.json.md`
+- `.github/workflows/build-all-targets.yml.md`
+- `.github/workflows/forbidden-tokens.yml.md`
+- `.github/workflows/gate.yml.md`
+- `.github/workflows/release-binaries.yml.md`
+- `.github/workflows/release.yml.md`
+- `.github/workflows/tla-verify.yml.md`
+- `.mise.toml.md`
+- `.semantos/memory/semantos_brain_rename.md`
+- `apps/loom-svelte/CANON-STATUS.md`
+- `apps/loom-svelte/package.json.md`
+- `apps/loom-svelte/src/App.svelte.md`
+- `apps/loom-svelte/src/app.css.md`
+- `apps/loom-svelte/src/components/HatSwitcher.svelte.md`
+- `apps/loom-svelte/src/components/StageTrail.svelte.md`
+- `apps/loom-svelte/src/lib/attachments-store.ts.md`
+- `apps/loom-svelte/src/lib/attention-api.ts.md`
+- `apps/loom-svelte/src/lib/auth.ts.md`
+- `apps/loom-svelte/src/lib/contacts-api.ts.md`
+- `apps/loom-svelte/src/lib/conversation-turns-api.ts.md`
+- `apps/loom-svelte/src/lib/customer-pivot.ts.md`
+- `apps/loom-svelte/src/lib/customers-store.ts.md`
+- `apps/loom-svelte/src/lib/extensions-api.ts.md`
+- `apps/loom-svelte/src/lib/hat-sessions.ts.md`
+- `apps/loom-svelte/src/lib/helm-event-stream.ts.md`
+- `apps/loom-svelte/src/lib/identity-api.ts.md`
+- `apps/loom-svelte/src/lib/intent-api.ts.md`
+- `apps/loom-svelte/src/lib/invoices-store.ts.md`
+- `apps/loom-svelte/src/lib/job-detail-graph.ts.md`
+- `apps/loom-svelte/src/lib/job-source.ts.md`
+- `apps/loom-svelte/src/lib/joblist-fetch.ts.md`
+- `apps/loom-svelte/src/lib/joblist-graph.ts.md`
+- `apps/loom-svelte/src/lib/jobs-store.ts.md`
+- `apps/loom-svelte/src/lib/oddjobz-query.ts.md`
+- `apps/loom-svelte/src/lib/persona.ts.md`
+- `apps/loom-svelte/src/lib/quotes-store.ts.md`
+- `apps/loom-svelte/src/lib/repl-client.ts.md`
+- `apps/loom-svelte/src/lib/repl-transcript-store.ts.md`
+- `apps/loom-svelte/src/lib/rtc-call.ts.md`
+- `apps/loom-svelte/src/lib/site-config-store.ts.md`
+- `apps/loom-svelte/src/lib/site-pivot.ts.md`
+- `apps/loom-svelte/src/lib/theme-store.ts.md`
+- `apps/loom-svelte/src/lib/visits-store.ts.md`
+- `apps/loom-svelte/src/main.ts.md`
+- `apps/loom-svelte/src/routes/customers/[id]/+page.svelte.md`
+- `apps/loom-svelte/src/routes/sites/[id]/+page.svelte.md`
+- `apps/loom-svelte/src/shell/AttentionSurface.svelte.md`
+- `apps/loom-svelte/src/shell/Dock.svelte.md`
+- `apps/loom-svelte/src/shell/ExtensionSwitcher.svelte.md`
+- `apps/loom-svelte/src/shell/OddjobzCartridge.svelte.md`
+- `apps/loom-svelte/src/shell/body-route.ts.md`
+- `apps/loom-svelte/src/shell/context-weights.ts.md`
+- `apps/loom-svelte/src/shell/me/MePanel.svelte.md`
+- `apps/loom-svelte/src/shell/me/me-format.ts.md`
+- `apps/loom-svelte/src/shell/shelf-compose.ts.md`
+- `apps/loom-svelte/src/shell/surface-registry.ts.md`
+- `apps/loom-svelte/src/shell/verb-intent.ts.md`
+- `apps/loom-svelte/src/views/Attention.svelte.md`
+- `apps/loom-svelte/src/views/Calendar.svelte.md`
+- `apps/loom-svelte/src/views/ContactPersonaPanel.svelte.md`
+- `apps/loom-svelte/src/views/ConversationThread.svelte.md`
+- `apps/loom-svelte/src/views/CustomerList.svelte.md`
+- `apps/loom-svelte/src/views/InvoiceDetail.svelte.md`
+- `apps/loom-svelte/src/views/InvoiceEditorInline.svelte.md`
+- `apps/loom-svelte/src/views/InvoiceList.svelte.md`
+- `apps/loom-svelte/src/views/JobDetail.svelte.md`
+- `apps/loom-svelte/src/views/JobDetailV2.svelte.md`
+- `apps/loom-svelte/src/views/JobList.svelte.md`
+- `apps/loom-svelte/src/views/NetworkView.svelte.md`
+- `apps/loom-svelte/src/views/QuoteDetail.svelte.md`
+- `apps/loom-svelte/src/views/QuoteEditorInline.svelte.md`
+- `apps/loom-svelte/src/views/QuoteList.svelte.md`
+- `apps/loom-svelte/src/views/SiteConfigEditor.svelte.md`
+- `apps/loom-svelte/src/views/SiteDetail.svelte.md`
+- `apps/loom-svelte/src/views/TalkModeView.svelte.md`
+- `apps/loom-svelte/src/views/Transcript.svelte.md`
+- `apps/loom-svelte/src/views/VisitDetail.svelte.md`
+- `apps/loom-svelte/src/views/VisitList.svelte.md`
+- `apps/loom-svelte/src/views/talk/CallPanel.svelte.md`
+- `apps/loom-svelte/src/views/talk/TalkAgentView.svelte.md`
+
+## Test / Fuzz Files
+- `apps/loom-svelte/tests/attachment-list-parse.test.ts.md`
+- `apps/loom-svelte/tests/attachments-store.test.ts.md`
+- `apps/loom-svelte/tests/attention-parse.test.ts.md`
+- `apps/loom-svelte/tests/attention-poll.test.ts.md`
+- `apps/loom-svelte/tests/body-route.test.ts.md`
+- `apps/loom-svelte/tests/calendar-parse.test.ts.md`
+- `apps/loom-svelte/tests/customer-list-parse.test.ts.md`
+- `apps/loom-svelte/tests/customer-pivot.test.ts.md`
+- `apps/loom-svelte/tests/customers-store.test.ts.md`
+- `apps/loom-svelte/tests/extensions-api.test.ts.md`
+- `apps/loom-svelte/tests/hat-sessions.test.ts.md`
+- `apps/loom-svelte/tests/helm-event-stream.test.ts.md`
+- `apps/loom-svelte/tests/identity-api.test.ts.md`
+- `apps/loom-svelte/tests/invoice-detail-parse.test.ts.md`
+- `apps/loom-svelte/tests/invoice-list-parse.test.ts.md`
+- `apps/loom-svelte/tests/invoices-store.test.ts.md`
+- `apps/loom-svelte/tests/job-detail-graph.test.ts.md`
+- `apps/loom-svelte/tests/job-detail-parse.test.ts.md`
+- `apps/loom-svelte/tests/job-list-parse.test.ts.md`
+- `apps/loom-svelte/tests/job-source.test.ts.md`
+- `apps/loom-svelte/tests/joblist-fetch.test.ts.md`
+- `apps/loom-svelte/tests/joblist-graph.test.ts.md`
+- `apps/loom-svelte/tests/jobs-store.test.ts.md`
+- `apps/loom-svelte/tests/me-format.test.ts.md`
+- `apps/loom-svelte/tests/oddjobz-query.test.ts.md`
+- `apps/loom-svelte/tests/quote-detail-parse.test.ts.md`
+- `apps/loom-svelte/tests/quote-list-parse.test.ts.md`
+- `apps/loom-svelte/tests/quotes-store.test.ts.md`
+- `apps/loom-svelte/tests/repl-client-bearer-cookie.test.ts.md`
+- `apps/loom-svelte/tests/repl-client-multi-hat.test.ts.md`
+- `apps/loom-svelte/tests/repl-client-transcript-integration.test.ts.md`
+- `apps/loom-svelte/tests/repl-client.test.ts.md`
+- `apps/loom-svelte/tests/repl-error-types.test.ts.md`
+- `apps/loom-svelte/tests/repl-transcript-store.test.ts.md`
+- `apps/loom-svelte/tests/shelf-compose.test.ts.md`
+- `apps/loom-svelte/tests/site-config-editor.test.ts.md`
+- `apps/loom-svelte/tests/site-pivot.test.ts.md`
+- `apps/loom-svelte/tests/surface-registry.test.ts.md`
+- `apps/loom-svelte/tests/theme-store.test.ts.md`
+- `apps/loom-svelte/tests/verb-intent.test.ts.md`
+- `apps/loom-svelte/tests/visit-detail-parse.test.ts.md`
+- `apps/loom-svelte/tests/visit-list-parse.test.ts.md`
+- `apps/loom-svelte/tests/visits-store.test.ts.md`
+- `apps/semantos/test/brain_info_test.dart.md`
+- `apps/semantos/test/challenge_bundle_store_test.dart.md`
+- `apps/semantos/test/dispatch/payload_canonical_test.dart.md`
+- `apps/semantos/test/dispatch/signed_mint_test.dart.md`
+- `apps/semantos/test/fixtures/end-to-end-pipeline-fixture.json.md`
+- `apps/semantos/test/gradient/dart_pipeline_test.dart.md`
+- `apps/semantos/test/intent_dispatcher_factory_test.dart.md`
+- `apps/semantos/test/intent_dispatcher_test.dart.md`
+- `apps/semantos/test/manifest_dispatch_test.dart.md`
+- `apps/semantos/test/ocr/image_extract_uploader_test.dart.md`
+- `apps/semantos/test/plexus_envelope_test.dart.md`
+- `apps/semantos/test/repositories/cell_query_repository_test.dart.md`
+- `apps/semantos/test/repositories/jobs_repository_test.dart.md`
+- `apps/semantos/test/repositories/operator_jobs_repository_test.dart.md`
+- `apps/semantos/test/rpc/brain_rpc_client_test.dart.md`
+- `apps/semantos/test/rpc/brain_rpc_live_test.dart.md`
+- `apps/semantos/test/shell/cartridge_parity_wiring_test.dart.md`
+- `apps/semantos/test/shell/cartridge_picker_navigation_test.dart.md`
+- `apps/semantos/test/shell/helm_home_attention_scope_test.dart.md`
+- `apps/semantos/test/shell/no_cert_banner_test.dart.md`
+- `apps/semantos/test/shell/shell_cartridge_host_test.dart.md`
+- `apps/semantos/test/shell/surfacing_mode_policy_test.dart.md`
+- `apps/semantos/test/type_hash_test.dart.md`
+- `apps/semantos/test/voice/audio_extract_uploader_test.dart.md`
+- `apps/semantos/test/wallet/address_test.dart.md`
+- `apps/semantos/test/wallet/brain_wallet_kat.json.md`
+- `apps/semantos/test/wallet/brain_wallet_kat_test.dart.md`
+- `apps/semantos/test/wallet/brc42_derive_test.dart.md`
+- `apps/semantos/test/wallet/cert_body_store_test.dart.md`
+- `apps/semantos/test/wallet/contacts_service_test.dart.md`
+- `apps/semantos/test/wallet/edge_derive_test.dart.md`
+- `apps/semantos/test/wallet/edge_invite_test.dart.md`
+- `apps/semantos/test/wallet/edge_kat.json.md`
+- `apps/semantos/test/wallet/edge_kat_test.dart.md`
+- `apps/semantos/test/wallet/edge_store_test.dart.md`
+- `apps/semantos/test/wallet/headers_client_test.dart.md`
+- `apps/semantos/test/wallet/recipe_store_test.dart.md`
+
+## Deploy / Runtime Files
+- `apps/loom-svelte/src/lib/helm-event-stream.ts.md`
+- `apps/loom-svelte/src/shell/shelf-compose.ts.md`
+- `apps/loom-svelte/tests/helm-event-stream.test.ts.md`
+- `apps/loom-svelte/tests/shelf-compose.test.ts.md`
+- `apps/oddjobtodd/src/components/HelmPrimitives.tsx.md`
+- `apps/oddjobtodd/src/components/HelmScreens.tsx.md`
+- `apps/semantos/lib/shell/helm_home_screen.dart.md`
+- `apps/semantos/lib/shell/helm_scaffold.dart.md`
+- `apps/semantos/lib/src/gradient/intent_trace_service.dart.md`
+- `apps/semantos/lib/src/voice/voice_session_service.dart.md`
+- `apps/semantos/lib/src/wallet/contacts_service.dart.md`
+- `apps/semantos/lib/src/wallet/wallet_key_service.dart.md`
+- `apps/semantos/test/shell/helm_home_attention_scope_test.dart.md`
+- `apps/semantos/test/shell/surfacing_mode_policy_test.dart.md`
+- `apps/semantos/test/wallet/contacts_service_test.dart.md`
+- `apps/semantos/test/wallet/wallet_key_service_test.dart.md`
+- `cartridges/chess/scripts/chess-rbs-deploy.sh.md`
+- `cartridges/inference-gate/deploy-model-to-pis.sh.md`
+- `cartridges/inference-gate/scripts/fleet-deploy.sh.md`
+- `cartridges/jambox/mobile/ios/Runner/Info.plist.md`
+- `cartridges/jambox/mobile/lib/src/pairing/pairing_service.dart.md`
+- `cartridges/jambox/mobile/lib/src/theme/theme_service.dart.md`
+- `cartridges/jambox/mobile/lib/src/theme/theme_service_flutter.dart.md`
+- `cartridges/jambox/web/src/contrib/policy.md`
+- `cartridges/jambox/web/src/contrib/policy.ts.md`
+- `cartridges/oddjobz/brain/src/__tests__/pricing-policy-defaults.test.ts.md`
+- `cartridges/oddjobz/brain/src/__tests__/pricing-policy-projector.test.ts.md`
+- `cartridges/oddjobz/brain/src/__tests__/set-pricing-policy.test.ts.md`
+- `cartridges/oddjobz/brain/src/cell-types/__tests__/pricing-policy.test.ts.md`
+- `cartridges/oddjobz/brain/src/cell-types/pricing-policy.ts.md`
+- `cartridges/oddjobz/brain/src/conversation/__tests__/chat-service-torture.test.ts.md`
+- `cartridges/oddjobz/brain/src/conversation/chat-service.ts.md`
+- `cartridges/oddjobz/brain/src/pricing-policy-defaults.ts.md`
+- `cartridges/oddjobz/brain/src/pricing-policy-projector.ts.md`
+- `cartridges/oddjobz/brain/src/set-pricing-policy.ts.md`
+- `cartridges/oddjobz/brain/tests/vectors/oddjobz_pricing_policy.json.md`
+- `cartridges/oddjobz/experience/lib/src/operator/quote_import_service.dart.md`
+- `cartridges/oddjobz/experience/test/quote_import_service_test.dart.md`
+- `cartridges/shared/cell-store/deploy-to-pis.sh.md`
+- `cartridges/shared/demo/policy-simulator.ts.md`
+- `cartridges/wallet-headers/brain/src/covenant-deploy.ts.md`
+- `cartridges/wallet-headers/brain/src/popup-policy.ts.md`
+- `cartridges/wallet-headers/brain/test/covenant-deploy.spec.ts.md`
+- `configs/extensions/trades-services.json.md`
+- `core/cell-ops/src/wasm/__tests__/policy-eval.test.ts.md`
+- `core/cell-ops/src/wasm/policy-eval.ts.md`
+- `core/protocol-types/src/encryption-service.ts.md`
+- `core/protocol-types/src/grammar/__tests__/policy.test.ts.md`
+- `core/protocol-types/src/grammar/validators/policy.ts.md`
+- `core/protocol-types/src/identity-adapters/KeyDerivationService.ts.md`
+- `core/protocol-types/src/overlay/lookup-service-client.ts.md`
+- `db/postgres/migrations/007_helm_learned_view.sql.md`
+- `db/postgres/migrations/014_helm_read_views.sql.md`
+- `db/postgres/tests/test_helm_learned_view.sql.md`
+- `db/postgres/tests/test_helm_read_views.sql.md`
+- `docker-compose.hackathon.yml.md`
+- `docker-compose.sidecar.yml.md`
+- `docker-compose.yml.md`
+- `infra/pravega/docker-compose.yml.md`
+- `packages/calendar/src/policy/buffer.ts.md`
+- `packages/calendar/src/policy/conflict.ts.md`
+- `packages/calendar/src/policy/freeness.ts.md`
+- `packages/cdm/cdm/src/lifecycle/policy-gate.ts.md`
+- `packages/cdm/cdm/src/policies/close-out-netting.policy.md`
+- `packages/cdm/cdm/src/policies/failure-to-pay-default.policy.md`
+- `packages/cdm/cdm/src/policies/payment-condition-precedent.policy.md`
+- `packages/cdm/cdm/src/policies/transfer-consent.policy.md`
+- `packages/cdm/cdm/src/policies/variation-margin.policy.md`
+- `packages/extraction/src/inference/grammar-composer.ts.md`
+- `packages/game-sdk/src/engine/__tests__/policy-hook.test.ts.md`
+- `packages/game-sdk/src/engine/policy-hook.ts.md`
+- `packages/game-sdk/src/policies/templates/durability.policy.md`
+- `packages/game-sdk/src/policies/templates/legendary-drop.policy.md`
+- `packages/game-sdk/src/policies/templates/level-gate.policy.md`
+- `packages/game-sdk/src/policies/templates/quest-no-trade.policy.md`
+- `packages/game-sdk/src/policies/templates/trade-restriction.policy.md`
+- `packages/metering/metering/src/policy-enforced-channel.ts.md`
+- `packages/policy-runtime/package.json.md`
+- `packages/policy-runtime/src/__tests__/authority.test.ts.md`
+- `packages/policy-runtime/src/anchor-emitter.ts.md`
+
+## Sample Files
+- `.changeset/config.json.md`
+- `.github/workflows/build-all-targets.yml.md`
+- `.github/workflows/forbidden-tokens.yml.md`
+- `.github/workflows/gate.yml.md`
+- `.github/workflows/release-binaries.yml.md`
+- `.github/workflows/release.yml.md`
+- `.github/workflows/tla-verify.yml.md`
+- `.mise.toml.md`
+- `.semantos/memory/semantos_brain_rename.md`
+- `apps/loom-svelte/CANON-STATUS.md`
+- `apps/loom-svelte/package.json.md`
+- `apps/loom-svelte/src/App.svelte.md`
+- `apps/loom-svelte/src/app.css.md`
+- `apps/loom-svelte/src/components/HatSwitcher.svelte.md`
+- `apps/loom-svelte/src/components/StageTrail.svelte.md`
+- `apps/loom-svelte/src/lib/attachments-store.ts.md`
+- `apps/loom-svelte/src/lib/attention-api.ts.md`
+- `apps/loom-svelte/src/lib/auth.ts.md`
+- `apps/loom-svelte/src/lib/contacts-api.ts.md`
+- `apps/loom-svelte/src/lib/conversation-turns-api.ts.md`
+- `apps/loom-svelte/src/lib/customer-pivot.ts.md`
+- `apps/loom-svelte/src/lib/customers-store.ts.md`
+- `apps/loom-svelte/src/lib/extensions-api.ts.md`
+- `apps/loom-svelte/src/lib/hat-sessions.ts.md`
+- `apps/loom-svelte/src/lib/helm-event-stream.ts.md`
+- `apps/loom-svelte/src/lib/identity-api.ts.md`
+- `apps/loom-svelte/src/lib/intent-api.ts.md`
+- `apps/loom-svelte/src/lib/invoices-store.ts.md`
+- `apps/loom-svelte/src/lib/job-detail-graph.ts.md`
+- `apps/loom-svelte/src/lib/job-source.ts.md`
+- `apps/loom-svelte/src/lib/joblist-fetch.ts.md`
+- `apps/loom-svelte/src/lib/joblist-graph.ts.md`
+- `apps/loom-svelte/src/lib/jobs-store.ts.md`
+- `apps/loom-svelte/src/lib/oddjobz-query.ts.md`
+- `apps/loom-svelte/src/lib/persona.ts.md`
+- `apps/loom-svelte/src/lib/quotes-store.ts.md`
+- `apps/loom-svelte/src/lib/repl-client.ts.md`
+- `apps/loom-svelte/src/lib/repl-transcript-store.ts.md`
+- `apps/loom-svelte/src/lib/rtc-call.ts.md`
+- `apps/loom-svelte/src/lib/site-config-store.ts.md`
+- `apps/loom-svelte/src/lib/site-pivot.ts.md`
+- `apps/loom-svelte/src/lib/theme-store.ts.md`
+- `apps/loom-svelte/src/lib/visits-store.ts.md`
+- `apps/loom-svelte/src/main.ts.md`
+- `apps/loom-svelte/src/routes/customers/[id]/+page.svelte.md`
+- `apps/loom-svelte/src/routes/sites/[id]/+page.svelte.md`
+- `apps/loom-svelte/src/shell/AttentionSurface.svelte.md`
+- `apps/loom-svelte/src/shell/Dock.svelte.md`
+- `apps/loom-svelte/src/shell/ExtensionSwitcher.svelte.md`
+- `apps/loom-svelte/src/shell/OddjobzCartridge.svelte.md`
+- `apps/loom-svelte/src/shell/body-route.ts.md`
+- `apps/loom-svelte/src/shell/context-weights.ts.md`
+- `apps/loom-svelte/src/shell/me/MePanel.svelte.md`
+- `apps/loom-svelte/src/shell/me/me-format.ts.md`
+- `apps/loom-svelte/src/shell/shelf-compose.ts.md`
+- `apps/loom-svelte/src/shell/surface-registry.ts.md`
+- `apps/loom-svelte/src/shell/verb-intent.ts.md`
+- `apps/loom-svelte/src/views/Attention.svelte.md`
+- `apps/loom-svelte/src/views/Calendar.svelte.md`
+- `apps/loom-svelte/src/views/ContactPersonaPanel.svelte.md`
+- `apps/loom-svelte/src/views/ConversationThread.svelte.md`
+- `apps/loom-svelte/src/views/CustomerList.svelte.md`
+- `apps/loom-svelte/src/views/InvoiceDetail.svelte.md`
+- `apps/loom-svelte/src/views/InvoiceEditorInline.svelte.md`
+- `apps/loom-svelte/src/views/InvoiceList.svelte.md`
+- `apps/loom-svelte/src/views/JobDetail.svelte.md`
+- `apps/loom-svelte/src/views/JobDetailV2.svelte.md`
+- `apps/loom-svelte/src/views/JobList.svelte.md`
+- `apps/loom-svelte/src/views/NetworkView.svelte.md`
+- `apps/loom-svelte/src/views/QuoteDetail.svelte.md`
+- `apps/loom-svelte/src/views/QuoteEditorInline.svelte.md`
+- `apps/loom-svelte/src/views/QuoteList.svelte.md`
+- `apps/loom-svelte/src/views/SiteConfigEditor.svelte.md`
+- `apps/loom-svelte/src/views/SiteDetail.svelte.md`
+- `apps/loom-svelte/src/views/TalkModeView.svelte.md`
+- `apps/loom-svelte/src/views/Transcript.svelte.md`
+- `apps/loom-svelte/src/views/VisitDetail.svelte.md`
+- `apps/loom-svelte/src/views/VisitList.svelte.md`
+- `apps/loom-svelte/src/views/talk/CallPanel.svelte.md`
+- `apps/loom-svelte/src/views/talk/TalkAgentView.svelte.md`

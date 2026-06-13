@@ -1,0 +1,52 @@
+{
+  "discipline": "semantos",
+  "principle": "Source-authority-aware discipline build. Code/proofs/tests/config/runtime snapshots are primary for claims about behavior; docs/plans are secondary explanatory material unless explicitly describing current canonical policy.",
+  "tiers": [
+    {
+      "tier": 1,
+      "label": "Primary behavior evidence",
+      "paths": [
+        "sources-code/runtime/**",
+        "sources-code/core/**",
+        "sources-code/packages/**",
+        "sources-code/apps/**",
+        "sources-code/cartridges/**",
+        "sources-code/db/**",
+        "sources-code/configs/**",
+        "sources-code/scripts/**",
+        "sources-code/tools/**"
+      ]
+    },
+    {
+      "tier": 2,
+      "label": "Verification evidence",
+      "paths": [
+        "sources-code/proofs/**",
+        "sources-code/tests/**",
+        ".github/**",
+        "package.json.md",
+        "pnpm-workspace.yaml.md",
+        "tsconfig*.md"
+      ]
+    },
+    {
+      "tier": 3,
+      "label": "Secondary explanatory evidence",
+      "paths": [
+        "sources/**/docs/**",
+        "sources/**/research/**",
+        "README.md"
+      ]
+    },
+    {
+      "tier": 4,
+      "label": "Prior Shad drafts",
+      "paths": [
+        "runs/**",
+        "artifacts/**"
+      ],
+      "note": "Useful as drafts only; not canonical without verification."
+    }
+  ],
+  "conflictRule": "If docs/plans conflict with code/proofs/tests/config, prefer code/proofs/tests/config and record the discrepancy."
+}
