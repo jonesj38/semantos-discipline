@@ -1,0 +1,32 @@
+---
+source_path: /home/jake/.edwinpai/disciplines/semantos/state/semantos-core-repo/runtime/verifier-sidecar/tsconfig.json
+source_type: folder
+memory_type: semantic_memory
+ingested_at: 2026-06-13T06:27:18.025119+00:00
+---
+
+# runtime/verifier-sidecar/tsconfig.json
+
+```json
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noImplicitReturns": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "types": ["bun-types"]
+  },
+  "include": ["src/**/*"]
+}
+
+```

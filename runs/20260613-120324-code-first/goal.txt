@@ -1,0 +1,10 @@
+Build the Semantos discipline from the semantos-core codebase using CODE AS PRIMARY AUTHORITY.
+
+Hard requirements:
+- Base conclusions primarily on actual code/proof/test/config/runtime snapshots in the provided sources, not docs or planning files.
+- Treat docs/readmes/plans as secondary hints only; if docs conflict with code, code wins.
+- Produce a durable future-agent discipline with layered artifacts: source-map, architecture, runtime concepts, protocols/security, storage/data model, formal methods, developer workflows, operational pitfalls/checklists, routing hints, final report, and quality gate.
+- Include explicit file paths, symbols/modules, commands, tests, config files, proof specs, and runtime entrypoints as evidence.
+- Include diagrams in Mermaid where useful, especially for runtime architecture, data/control flow, storage/event flow, and proof/test traceability.
+- The quality gate must reject a docs-dominant report. It must summarize evidence mix and name the code/proof/test/config paths that ground the major claims.
+- Do not invent implementation plans; describe what semantos-core actually contains.

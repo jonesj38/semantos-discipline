@@ -1,0 +1,150 @@
+---
+source_path: /home/jake/.edwinpai/disciplines/semantos/state/semantos-core-repo/core/protocol-types/src/adapters/indexed-db-adapter.ts
+source_type: folder
+memory_type: semantic_memory
+ingested_at: 2026-06-13T06:27:17.879108+00:00
+---
+
+# core/protocol-types/src/adapters/indexed-db-adapter.ts
+
+```ts
+/**
+ * IndexedDbAdapter — StorageAdapter wrapping IndexedDB as browser fallback.
+ *
+ * Used when OPFS is not available. Database: 'semantos-storage', store: 'kv'.
+ * No watch() — IndexedDB has no change notification API.
+ */
+
+import type { StorageAdapter, StorageStat } from '../storage';
+
+const DB_NAME = 'semantos-storage';
+const STORE_NAME = 'kv';
+const DB_VERSION = 1;
+
+async function sha256Hex(data: Uint8Array): Promise<string> {
+  const hash = await crypto.subtle.digest('SHA-256', data);
+  return Array.from(new Uint8Array(hash))
+    .map(b => b.toString(16).padStart(2, '0'))
+    .join('');
+}
+
+function openDb(): Promise<IDBDatabase> {
+  return new Promise((resolve, reject) => {
+    const req = indexedDB.open(DB_NAME, DB_VERSION);
+    req.onupgradeneeded = () => {
+      const db = req.result;
+      if (!db.objectStoreNames.contains(STORE_NAME)) {
+        db.createObjectStore(STORE_NAME);
+      }
+    };
+    req.onsuccess = () => resolve(req.result);
+    req.onerror = () => reject(req.error);
+  });
+}
+
+function txGet(db: IDBDatabase, key: string): Promise<ArrayBuffer | undefined> {
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction(STORE_NAME, 'readonly');
+    const store = tx.objectStore(STORE_NAME);
+    const req = store.get(key);
+    req.onsuccess = () => resolve(req.result);
+    req.onerror = () => reject(req.error);
+  });
+}
+
+function txPut(db: IDBDatabase, key: string, value: ArrayBuffer): Promise<void> {
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction(STORE_NAME, 'readwrite');
+    const store = tx.objectStore(STORE_NAME);
+    const req = store.put(value, key);
+    req.onsuccess = () => resolve();
+    req.onerror = () => reject(req.error);
+  });
+}
+
+function txDelete(db: IDBDatabase, key: string): Promise<boolean> {
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction(STORE_NAME, 'readwrite');
+    const store = tx.objectStore(STORE_NAME);
+    // Check if key exists first
+    const getReq = store.get(key);
+    getReq.onsuccess = () => {
+      if (getReq.result === undefined) {
+        resolve(false);
+      } else {
+        const delReq = store.delete(key);
+        delReq.onsuccess = () => resolve(true);
+        delReq.onerror = () => reject(delReq.error);
+      }
+    };
+    getReq.onerror = () => reject(getReq.error);
+  });
+}
+
+function txKeys(db: IDBDatabase, lower: string, upper: string): Promise<string[]> {
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction(STORE_NAME, 'readonly');
+    const store = tx.objectStore(STORE_NAME);
+    const range = IDBKeyRange.bound(lower, upper, false, false);
+    const req = store.getAllKeys(range);
+    req.onsuccess = () => resolve(req.result as string[]);
+    req.onerror = () => reject(req.error);
+  });
+}
+
+export class IndexedDbAdapter implements StorageAdapter {
+  private dbPromise: Promise<IDBDatabase> | null = null;
+
+  private getDb(): Promise<IDBDatabase> {
+    if (!this.dbPromise) {
+      this.dbPromise = openDb();
+    }
+    return this.dbPromise;
+  }
+
+  async read(key: string): Promise<Uint8Array | null> {
+    const db = await this.getDb();
+    const result = await txGet(db, key);
+    if (result === undefined) return null;
+    return new Uint8Array(result);
+  }
+
+  async write(key: string, data: Uint8Array): Promise<void> {
+    const db = await this.getDb();
+    await txPut(db, key, data.buffer.slice(data.byteOffset, data.byteOffset + data.byteLength));
+  }
+
+  async exists(key: string): Promise<boolean> {
+    const db = await this.getDb();
+    const result = await txGet(db, key);
+    return result !== undefined;
+  }
+
+  async list(prefix: string): Promise<string[]> {
+    const normalizedPrefix = prefix.endsWith('/') ? prefix : prefix + '/';
+    const db = await this.getDb();
+    const keys = await txKeys(db, normalizedPrefix, normalizedPrefix + '\uffff');
+    return keys.map(k => k.slice(normalizedPrefix.length));
+  }
+
+  async delete(key: string): Promise<boolean> {
+    const db = await this.getDb();
+    return txDelete(db, key);
+  }
+
+  async stat(key: string): Promise<StorageStat | null> {
+    const db = await this.getDb();
+    const result = await txGet(db, key);
+    if (result === undefined) return null;
+    const data = new Uint8Array(result);
+    return {
+      size: data.byteLength,
+      modifiedAt: Date.now(), // IDB doesn't track mtime
+      contentHash: await sha256Hex(data),
+    };
+  }
+
+  // No watch() — IndexedDB has no change notification API.
+}
+
+```
