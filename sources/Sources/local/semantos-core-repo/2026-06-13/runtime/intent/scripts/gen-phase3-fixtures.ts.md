@@ -1,0 +1,278 @@
+---
+source_path: /home/jake/.edwinpai/disciplines/semantos/state/semantos-core-repo/runtime/intent/scripts/gen-phase3-fixtures.ts
+source_type: folder
+memory_type: semantic_memory
+ingested_at: 2026-06-13T06:27:18.339435+00:00
+---
+
+# runtime/intent/scripts/gen-phase3-fixtures.ts
+
+```ts
+#!/usr/bin/env bun
+/**
+ * D-O5m.followup-3 Phase 3 — generate the three cross-language
+ * fixtures the Dart gradient pipeline asserts byte-identical parity
+ * against:
+ *
+ *   1. runtime/intent/fixtures/sir-to-oir-fixture.json
+ *      The TS lowerSIR(SIRProgram) output for a representative set of
+ *      jural categories. The Dart sirToOir() port is asserted to
+ *      produce the same OIR program structure.
+ *
+ *   2. runtime/intent/fixtures/oir-to-bytes-fixture.json
+ *      The TS emit(IRProgram) opcode-byte output for a representative
+ *      set of OIR programs. The Dart oirToBytes() port is asserted to
+ *      produce byte-identical output. This is the load-bearing
+ *      α-equivalence property (paper §3, §4.4).
+ *
+ *   3. runtime/intent/fixtures/end-to-end-pipeline-fixture.json
+ *      A full Intent → SIR → OIR → opcode-bytes → ScriptResult run.
+ *      Asserts every stage matches the canonical TS output.
+ *
+ * Reference:
+ *   runtime/intent/src/pipeline.ts (the orchestrator the Dart
+ *     pipeline mirrors stage-for-stage),
+ *   core/semantos-sir/src/lower-sir.ts (port reference for L1->L2),
+ *   core/semantos-ir/src/emit.ts (port reference for L2->L3),
+ *   apps/oddjobz-mobile/lib/src/gradient/{sir_to_oir,oir_to_bytes,
+ *     dart_pipeline}.dart (the Dart consumers).
+ */
+
+import { writeFileSync } from 'node:fs';
+import { dirname, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+import { lowerSIR } from '../../../core/semantos-sir/src/lower-sir';
+import type {
+  SIRProgram,
+  SIRNode,
+  GovernanceContext,
+} from '../../../core/semantos-sir/src/types';
+import { emit } from '../../../core/semantos-ir/src/emit';
+import { canonicalize } from '../../../core/semantos-ir/src/canonical';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const FIX_DIR = resolve(
+  __dirname,
+  '../fixtures',
+);
+
+// ── Helper: defaultGovernance ────────────────────────────────
+
+function gov(overrides: Partial<GovernanceContext> = {}): GovernanceContext {
+  return {
+    trustClass: 'interpretive',
+    proofRequirement: 'attestation',
+    executionAuthority: 'hat_scoped',
+    linearity: 'LINEAR',
+    ...overrides,
+  };
+}
+
+const prov = {
+  source: 'voice' as const,
+  expressedAt: '2026-04-17T00:00:00Z',
+  trustAtExpression: 'interpretive' as const,
+};
+
+// ── Build a node + program (untagged-category fallback path) ─
+
+function nodeProg(
+  category: string,
+  body: Partial<SIRNode>,
+): SIRProgram {
+  // We use the untagged-category fallback path (lower-sir.ts treats
+  // node.category.lexicon !== 'jural' as constraint-only lowering;
+  // an untagged string is treated the same way). This matches the
+  // existing core/semantos-sir golden test convention so the Dart
+  // port can mirror the TS contract without re-implementing the
+  // whole lexicon registry.
+  const node = {
+    id: '$s0',
+    // Cast to any to honour the legacy untagged-category convention
+    // used in the SIR golden tests (see core/semantos-sir/src/__tests__).
+    category: category as any,
+    taxonomy: { what: 'demo', how: 'demo', why: 'demo' },
+    identity: { subject: { type: 'role', name: 'demo' } },
+    governance: gov(),
+    action: 'demo',
+    constraint: { kind: 'capability', required: 5, name: 'DEMO' },
+    provenance: prov,
+    ...body,
+  } as SIRNode;
+  return {
+    nodes: [node],
+    primaryNodeId: node.id,
+    programGovernance: gov(),
+  };
+}
+
+// ── Fixture 1: SIR → OIR ──────────────────────────────────────
+
+const sirToOirCases = [
+  {
+    name: 'permission_capability',
+    description: 'Permission node with single capability constraint',
+    program: nodeProg('permission', {
+      constraint: { kind: 'capability', required: 5, name: 'METERING' },
+    }),
+  },
+  {
+    name: 'prohibition_value',
+    description: 'Prohibition node with value comparison + logical_not',
+    program: nodeProg('prohibition', {
+      constraint: { kind: 'value', field: 'pressure', op: '>', value: 150 },
+    }),
+  },
+  {
+    name: 'declaration_composite_and',
+    description: 'Declaration with composite AND of domain + value',
+    program: nodeProg('declaration', {
+      constraint: {
+        kind: 'composite',
+        op: 'and',
+        children: [
+          { kind: 'domain', flag: 0x05 },
+          { kind: 'value', field: 'status', op: '=', value: 'executed' },
+        ],
+      },
+    }),
+  },
+  {
+    name: 'condition_temporal',
+    description: 'Condition node with temporal-after constraint',
+    program: nodeProg('condition', {
+      constraint: { kind: 'temporal', op: 'after', iso: '2026-04-22T00:00:00Z' },
+    }),
+  },
+];
+
+const sirToOirFixture = {
+  _comment:
+    'Generated by runtime/intent/scripts/gen-phase3-fixtures.ts -- DO NOT EDIT BY HAND.',
+  cases: sirToOirCases.map((c) => {
+    const lowered = lowerSIR(c.program);
+    if (!lowered.ok) {
+      throw new Error(`fixture lowering failed for ${c.name}: ${lowered.message}`);
+    }
+    return {
+      name: c.name,
+      description: c.description,
+      sirProgram: c.program,
+      oirProgram: lowered.program,
+      canonicalOirJson: canonicalize(lowered.program),
+    };
+  }),
+};
+
+writeFileSync(
+  resolve(FIX_DIR, 'sir-to-oir-fixture.json'),
+  JSON.stringify(sirToOirFixture, null, 2) + '\n',
+);
+
+// ── Fixture 2: OIR → bytes ────────────────────────────────────
+
+const oirCases = sirToOirCases.map((c) => {
+  const lowered = lowerSIR(c.program);
+  if (!lowered.ok) throw new Error('unreachable');
+  const bytes = emit(lowered.program);
+  return {
+    name: c.name,
+    description: c.description,
+    oirProgram: lowered.program,
+    canonicalOirJson: canonicalize(lowered.program),
+    bytesHex: Buffer.from(bytes).toString('hex'),
+    bytesLength: bytes.byteLength,
+  };
+});
+
+const oirToBytesFixture = {
+  _comment:
+    'Generated by runtime/intent/scripts/gen-phase3-fixtures.ts -- DO NOT EDIT BY HAND.',
+  // The load-bearing claim: any OIRProgram that round-trips through
+  // canonical JSON encoding produces the same opcode bytes regardless
+  // of how it was produced (TS lowerSIR(), Dart sirToOir(), or a
+  // future Lean extraction). This fixture freezes the byte sequences
+  // so the Dart oirToBytes() port can assert parity at every level.
+  cases: oirCases,
+};
+
+writeFileSync(
+  resolve(FIX_DIR, 'oir-to-bytes-fixture.json'),
+  JSON.stringify(oirToBytesFixture, null, 2) + '\n',
+);
+
+// ── Fixture 3: end-to-end pipeline ────────────────────────────
+
+// Use the permission_capability case as the canonical end-to-end
+// demonstration. A tradie's voice intent ("apply for a permission")
+// flows from SIR through the full L2 → L3 pipeline and the kernel
+// returns ok=true with opcount matching the emitted byte-stream's
+// opcode count.
+const e2eCase = sirToOirCases[0]; // permission_capability
+const e2eLowered = lowerSIR(e2eCase.program);
+if (!e2eLowered.ok) throw new Error('unreachable');
+const e2eBytes = emit(e2eLowered.program);
+
+// Compute the expected opcount the same way Phase 3's
+// semantos_execute_script does: walk the byte stream counting opcodes
+// (push opcodes count as one each).
+function countOpcodes(bytes: Uint8Array): number {
+  let pc = 0;
+  let count = 0;
+  while (pc < bytes.byteLength) {
+    const op = bytes[pc]!;
+    count++;
+    if (op >= 0x01 && op <= 0x4b) {
+      pc += 1 + op;
+    } else if (op === 0x4c) {
+      pc += 2 + bytes[pc + 1]!;
+    } else if (op === 0x4d) {
+      const len = bytes[pc + 1]! | (bytes[pc + 2]! << 8);
+      pc += 3 + len;
+    } else if (op === 0x4e) {
+      const len =
+        bytes[pc + 1]! |
+        (bytes[pc + 2]! << 8) |
+        (bytes[pc + 3]! << 16) |
+        (bytes[pc + 4]! << 24);
+      pc += 5 + len;
+    } else {
+      pc += 1;
+    }
+  }
+  return count;
+}
+
+const e2eFixture = {
+  _comment:
+    'Generated by runtime/intent/scripts/gen-phase3-fixtures.ts -- DO NOT EDIT BY HAND.',
+  caseName: e2eCase.name,
+  description:
+    'End-to-end Intent->SIR->OIR->bytes->ScriptResult pipeline parity. ' +
+    'The Dart pipeline (apps/oddjobz-mobile/lib/src/gradient/dart_pipeline.dart) ' +
+    'must produce byte-identical output at every stage boundary.',
+  sirProgram: e2eCase.program,
+  oirProgram: e2eLowered.program,
+  canonicalOirJson: canonicalize(e2eLowered.program),
+  bytesHex: Buffer.from(e2eBytes).toString('hex'),
+  bytesLength: e2eBytes.byteLength,
+  expectedKernelResult: {
+    ok: true,
+    opcount: countOpcodes(e2eBytes),
+    stackDepth: 1,
+    gasUsed: 0,
+  },
+};
+
+writeFileSync(
+  resolve(FIX_DIR, 'end-to-end-pipeline-fixture.json'),
+  JSON.stringify(e2eFixture, null, 2) + '\n',
+);
+
+console.log('Wrote sir-to-oir-fixture.json');
+console.log('Wrote oir-to-bytes-fixture.json');
+console.log('Wrote end-to-end-pipeline-fixture.json');
+
+```

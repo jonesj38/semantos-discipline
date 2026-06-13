@@ -1,0 +1,14 @@
+# Runtime/process state
+state/semantos-core-repo/
+state/*.pid
+state/*.log
+state/shad-source-id.txt
+
+# Long-run logs/PIDs
+runs/*/*.pid
+runs/*/*.log
+
+# Local caches
+.claude/
+.shad/
+.DS_Store

@@ -1,0 +1,72 @@
+---
+source_path: /home/jake/.edwinpai/disciplines/semantos/state/semantos-core-repo/platforms/flutter/semantos_ffi/.dart_tool/hooks_runner/objective_c/de310349bc/stdout.txt
+source_type: folder
+memory_type: semantic_memory
+ingested_at: 2026-06-13T06:27:19.006151+00:00
+---
+
+Running `(cd /Users/toddprice/.pub-cache/hosted/pub.dev/objective_c-9.3.0/; TMPDIR=/var/folders/c6/rcj8k8z94lbcbc4wyj5jkctr0000gn/T/ PATH=/Users/toddprice/.codeium/windsurf/bin:/Users/toddprice/.cargo/bin:/Users/toddprice/.bun/bin:/Users/toddprice/projects/shomee-alpha/bin:/Users/toddprice/.nvm/versions/node/v20.19.0/bin:/Users/toddprice/.elan/bin:/Library/Frameworks/Python.framework/Versions/3.10/bin:/Library/Frameworks/Python.framework/Versions/3.11/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/go/bin:/Users/toddprice/.local/bin:/Users/toddprice/.local/bin HOME=/Users/toddprice /opt/homebrew/share/flutter/bin/cache/dart-sdk/bin/dart --packages=/Users/toddprice/projects/semantos-core/.claude/worktrees/wonderful-jennings/platforms/flutter/semantos_ffi/.dart_tool/package_config.json /Users/toddprice/projects/semantos-core/.claude/worktrees/wonderful-jennings/platforms/flutter/semantos_ffi/.dart_tool/hooks_runner/objective_c/de310349bc/hook.dill --config=/Users/toddprice/projects/semantos-core/.claude/worktrees/wonderful-jennings/platforms/flutter/semantos_ffi/.dart_tool/hooks_runner/objective_c/de310349bc/input.json )`.
+INFO: 2026-04-03 10:38:52.570900: Running `/Library/Developer/CommandLineTools/usr/bin/clang --version`.
+
+INFO: 2026-04-03 10:38:52.593133: Running `/Library/Developer/CommandLineTools/usr/bin/clang --version`.
+
+INFO: 2026-04-03 10:38:52.611472: Running: /Library/Developer/CommandLineTools/usr/bin/clang -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -target arm64-apple-darwin -mmacos-version-min=13 -c /Users/toddprice/.pub-cache/hosted/pub.dev/objective_c-9.3.0/src/include/dart_api_dl.c -fpic -I src -o /Users/toddprice/projects/semantos-core/.claude/worktrees/wonderful-jennings/platforms/flutter/semantos_ffi/.dart_tool/hooks_runner/shared/objective_c/build/de310349bc/obj/src/include/dart_api_dl.c.o
+
+INFO: 2026-04-03 10:38:52.611863: Running: /Library/Developer/CommandLineTools/usr/bin/clang -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -target arm64-apple-darwin -mmacos-version-min=13 -c /Users/toddprice/.pub-cache/hosted/pub.dev/objective_c-9.3.0/src/objective_c.c -fpic -I src -o /Users/toddprice/projects/semantos-core/.claude/worktrees/wonderful-jennings/platforms/flutter/semantos_ffi/.dart_tool/hooks_runner/shared/objective_c/build/de310349bc/obj/src/objective_c.c.o
+
+INFO: 2026-04-03 10:38:52.612079: Running: /Library/Developer/CommandLineTools/usr/bin/clang -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -target arm64-apple-darwin -mmacos-version-min=13 -c /Users/toddprice/.pub-cache/hosted/pub.dev/objective_c-9.3.0/test/util.c -fpic -I src -o /Users/toddprice/projects/semantos-core/.claude/worktrees/wonderful-jennings/platforms/flutter/semantos_ffi/.dart_tool/hooks_runner/shared/objective_c/build/de310349bc/obj/test/util.c.o
+
+INFO: 2026-04-03 10:38:52.612203: Running: /Library/Developer/CommandLineTools/usr/bin/clang -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -target arm64-apple-darwin -mmacos-version-min=13 -x objective-c -fobjc-arc -c /Users/toddprice/.pub-cache/hosted/pub.dev/objective_c-9.3.0/src/input_stream_adapter.m -fpic -I src -o /Users/toddprice/projects/semantos-core/.claude/worktrees/wonderful-jennings/platforms/flutter/semantos_ffi/.dart_tool/hooks_runner/shared/objective_c/build/de310349bc/obj/src/input_stream_adapter.m.o
+
+INFO: 2026-04-03 10:38:52.612331: Running: /Library/Developer/CommandLineTools/usr/bin/clang -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -target arm64-apple-darwin -mmacos-version-min=13 -x objective-c -fobjc-arc -c /Users/toddprice/.pub-cache/hosted/pub.dev/objective_c-9.3.0/src/objective_c.m -fpic -I src -o /Users/toddprice/projects/semantos-core/.claude/worktrees/wonderful-jennings/platforms/flutter/semantos_ffi/.dart_tool/hooks_runner/shared/objective_c/build/de310349bc/obj/src/objective_c.m.o
+
+INFO: 2026-04-03 10:38:52.612570: Running: /Library/Developer/CommandLineTools/usr/bin/clang -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -target arm64-apple-darwin -mmacos-version-min=13 -x objective-c -fobjc-arc -c /Users/toddprice/.pub-cache/hosted/pub.dev/objective_c-9.3.0/src/observer.m -fpic -I src -o /Users/toddprice/projects/semantos-core/.claude/worktrees/wonderful-jennings/platforms/flutter/semantos_ffi/.dart_tool/hooks_runner/shared/objective_c/build/de310349bc/obj/src/observer.m.o
+
+INFO: 2026-04-03 10:38:52.612774: Running: /Library/Developer/CommandLineTools/usr/bin/clang -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -target arm64-apple-darwin -mmacos-version-min=13 -x objective-c -fobjc-arc -c /Users/toddprice/.pub-cache/hosted/pub.dev/objective_c-9.3.0/src/ns_number.m -fpic -I src -o /Users/toddprice/projects/semantos-core/.claude/worktrees/wonderful-jennings/platforms/flutter/semantos_ffi/.dart_tool/hooks_runner/shared/objective_c/build/de310349bc/obj/src/ns_number.m.o
+
+INFO: 2026-04-03 10:38:52.613006: Running: /Library/Developer/CommandLineTools/usr/bin/clang -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -target arm64-apple-darwin -mmacos-version-min=13 -x objective-c -fobjc-arc -c /Users/toddprice/.pub-cache/hosted/pub.dev/objective_c-9.3.0/src/protocol.m -fpic -I src -o /Users/toddprice/projects/semantos-core/.claude/worktrees/wonderful-jennings/platforms/flutter/semantos_ffi/.dart_tool/hooks_runner/shared/objective_c/build/de310349bc/obj/src/protocol.m.o
+
+INFO: 2026-04-03 10:38:52.613296: Running: /Library/Developer/CommandLineTools/usr/bin/clang -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -target arm64-apple-darwin -mmacos-version-min=13 -x objective-c -fobjc-arc -c /Users/toddprice/.pub-cache/hosted/pub.dev/objective_c-9.3.0/src/objective_c_bindings_generated.m -fpic -I src -o /Users/toddprice/projects/semantos-core/.claude/worktrees/wonderful-jennings/platforms/flutter/semantos_ffi/.dart_tool/hooks_runner/shared/objective_c/build/de310349bc/obj/src/objective_c_bindings_generated.m.o
+
+INFO: 2026-04-03 10:38:52.652768: 
+INFO: 2026-04-03 10:38:52.652871: 
+INFO: 2026-04-03 10:38:52.652902: Generated /Users/toddprice/projects/semantos-core/.claude/worktrees/wonderful-jennings/platforms/flutter/semantos_ffi/.dart_tool/hooks_runner/shared/objective_c/build/de310349bc/obj/src/include/dart_api_dl.c.o
+
+INFO: 2026-04-03 10:38:52.664409: 
+INFO: 2026-04-03 10:38:52.664457: 
+INFO: 2026-04-03 10:38:52.664468: Generated /Users/toddprice/projects/semantos-core/.claude/worktrees/wonderful-jennings/platforms/flutter/semantos_ffi/.dart_tool/hooks_runner/shared/objective_c/build/de310349bc/obj/src/objective_c.c.o
+
+INFO: 2026-04-03 10:38:52.665177: 
+INFO: 2026-04-03 10:38:52.665214: 
+INFO: 2026-04-03 10:38:52.665227: Generated /Users/toddprice/projects/semantos-core/.claude/worktrees/wonderful-jennings/platforms/flutter/semantos_ffi/.dart_tool/hooks_runner/shared/objective_c/build/de310349bc/obj/test/util.c.o
+
+INFO: 2026-04-03 10:38:52.674329: 
+INFO: 2026-04-03 10:38:52.674374: 
+INFO: 2026-04-03 10:38:52.674386: Generated /Users/toddprice/projects/semantos-core/.claude/worktrees/wonderful-jennings/platforms/flutter/semantos_ffi/.dart_tool/hooks_runner/shared/objective_c/build/de310349bc/obj/src/observer.m.o
+
+INFO: 2026-04-03 10:38:52.677489: 
+INFO: 2026-04-03 10:38:52.677521: 
+INFO: 2026-04-03 10:38:52.677531: Generated /Users/toddprice/projects/semantos-core/.claude/worktrees/wonderful-jennings/platforms/flutter/semantos_ffi/.dart_tool/hooks_runner/shared/objective_c/build/de310349bc/obj/src/protocol.m.o
+
+INFO: 2026-04-03 10:38:52.828562: 
+INFO: 2026-04-03 10:38:52.828601: 
+INFO: 2026-04-03 10:38:52.828612: Generated /Users/toddprice/projects/semantos-core/.claude/worktrees/wonderful-jennings/platforms/flutter/semantos_ffi/.dart_tool/hooks_runner/shared/objective_c/build/de310349bc/obj/src/ns_number.m.o
+
+INFO: 2026-04-03 10:38:52.832366: 
+INFO: 2026-04-03 10:38:52.832399: 
+INFO: 2026-04-03 10:38:52.832411: Generated /Users/toddprice/projects/semantos-core/.claude/worktrees/wonderful-jennings/platforms/flutter/semantos_ffi/.dart_tool/hooks_runner/shared/objective_c/build/de310349bc/obj/src/objective_c.m.o
+
+INFO: 2026-04-03 10:38:52.834228: 
+INFO: 2026-04-03 10:38:52.834254: 
+INFO: 2026-04-03 10:38:52.834267: Generated /Users/toddprice/projects/semantos-core/.claude/worktrees/wonderful-jennings/platforms/flutter/semantos_ffi/.dart_tool/hooks_runner/shared/objective_c/build/de310349bc/obj/src/input_stream_adapter.m.o
+
+INFO: 2026-04-03 10:38:52.851236: 
+INFO: 2026-04-03 10:38:52.851267: 
+INFO: 2026-04-03 10:38:52.851278: Generated /Users/toddprice/projects/semantos-core/.claude/worktrees/wonderful-jennings/platforms/flutter/semantos_ffi/.dart_tool/hooks_runner/shared/objective_c/build/de310349bc/obj/src/objective_c_bindings_generated.m.o
+
+INFO: 2026-04-03 10:38:52.851642: Running: /Library/Developer/CommandLineTools/usr/bin/clang -shared -Wl,-encryptable -undefined dynamic_lookup -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -target arm64-apple-darwin -mmacos-version-min=13 /Users/toddprice/projects/semantos-core/.claude/worktrees/wonderful-jennings/platforms/flutter/semantos_ffi/.dart_tool/hooks_runner/shared/objective_c/build/de310349bc/obj/src/include/dart_api_dl.c.o /Users/toddprice/projects/semantos-core/.claude/worktrees/wonderful-jennings/platforms/flutter/semantos_ffi/.dart_tool/hooks_runner/shared/objective_c/build/de310349bc/obj/src/objective_c.c.o /Users/toddprice/projects/semantos-core/.claude/worktrees/wonderful-jennings/platforms/flutter/semantos_ffi/.dart_tool/hooks_runner/shared/objective_c/build/de310349bc/obj/test/util.c.o /Users/toddprice/projects/semantos-core/.claude/worktrees/wonderful-jennings/platforms/flutter/semantos_ffi/.dart_tool/hooks_runner/shared/objective_c/build/de310349bc/obj/src/input_stream_adapter.m.o /Users/toddprice/projects/semantos-core/.claude/worktrees/wonderful-jennings/platforms/flutter/semantos_ffi/.dart_tool/hooks_runner/shared/objective_c/build/de310349bc/obj/src/objective_c.m.o /Users/toddprice/projects/semantos-core/.claude/worktrees/wonderful-jennings/platforms/flutter/semantos_ffi/.dart_tool/hooks_runner/shared/objective_c/build/de310349bc/obj/src/observer.m.o /Users/toddprice/projects/semantos-core/.claude/worktrees/wonderful-jennings/platforms/flutter/semantos_ffi/.dart_tool/hooks_runner/shared/objective_c/build/de310349bc/obj/src/ns_number.m.o /Users/toddprice/projects/semantos-core/.claude/worktrees/wonderful-jennings/platforms/flutter/semantos_ffi/.dart_tool/hooks_runner/shared/objective_c/build/de310349bc/obj/src/protocol.m.o /Users/toddprice/projects/semantos-core/.claude/worktrees/wonderful-jennings/platforms/flutter/semantos_ffi/.dart_tool/hooks_runner/shared/objective_c/build/de310349bc/obj/src/objective_c_bindings_generated.m.o -o /Users/toddprice/projects/semantos-core/.claude/worktrees/wonderful-jennings/platforms/flutter/semantos_ffi/.dart_tool/hooks_runner/shared/objective_c/build/de310349bc/objective_c.dylib
+
+INFO: 2026-04-03 10:38:52.887447: 
+INFO: 2026-04-03 10:38:52.887534: 
+INFO: 2026-04-03 10:38:52.887546: Generated /Users/toddprice/projects/semantos-core/.claude/worktrees/wonderful-jennings/platforms/flutter/semantos_ffi/.dart_tool/hooks_runner/shared/objective_c/build/de310349bc/objective_c.dylib
+

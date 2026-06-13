@@ -1,0 +1,12 @@
+Build the Semantos discipline from the semantos-core codebase.
+
+Create a thorough, source-grounded discipline report for future EdwinPAI agents. The report should explain:
+- What Semantos is and the product/system mental model.
+- The repository architecture and major packages/modules.
+- Core runtime concepts, data models, protocols, proofs, invariants, and security/trust assumptions.
+- How the TLA+/Lean/fuzz proof assets relate to implementation.
+- Developer workflows, build/test/release surfaces, operational concerns, and deployment/runtime components.
+- Common pitfalls, source authority/conflict rules, and checklists for future agents working on Semantos.
+- Recommended runtime retrieval/useWhen/avoidWhen hints for the Semantos discipline.
+
+Use the `semantos-discipline` QMD collection as the source corpus. Prioritize source-grounded conclusions and cite/quote important files where useful. Produce a durable final report suitable for publishing into `/home/jake/.edwinpai/disciplines/semantos/artifacts/semantos-discipline-report.md`.
