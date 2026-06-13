@@ -1,0 +1,26 @@
+[
+  {
+    "docid": "#9171e2",
+    "score": 0.94,
+    "file": "qmd://semantos-discipline/Sources/local/semantos-core-repo/2026-06-13/docs/PROOF-COVERAGE.md",
+    "line": 38,
+    "title": "Proof Coverage Map — Claims × Proof Status",
+    "snippet": "@@ -37,4 @@ (36 before, 220 after)\n|---|---|---|---|---|\n| **K1** | Linearity — LINEAR cells never duplicated, never silently discarded | [`LinearityK1.lean`](../proofs/lean/Semantos/Theorems/LinearityK1.lean) | [`Linearity.tla`](../proofs/tla/Linearity.tla) (NEW 2026-05-13) | ✓ **both sides** |\n| **K2** | Authorization soundness ..."
+  },
+  {
+    "docid": "#7b1db3",
+    "score": 0.93,
+    "file": "qmd://semantos-discipline/Sources/local/semantos-core-repo/2026-06-13/docs/design/PROOFS-WT-TLA-EXTENSION-PLAN.md",
+    "line": 31,
+    "title": "Wallet TLA+ Extension Plan — WT1–WT3",
+    "snippet": "@@ -30,4 @@ (29 before, 355 after)\n|---|---|\n| `SemanticTypes.tla` | Base types + linearity invariant |\n| `EvidenceChain.tla` | Append-only chain integrity |\n| `ReplayPrevention.tla` | No double-consume under concurrency |"
+  },
+  {
+    "docid": "#396a54",
+    "score": 0.9,
+    "file": "qmd://semantos-discipline/Sources/local/semantos-core-repo/2026-06-13/docs/prd/UNIFICATION-ROADMAP.md",
+    "line": 839,
+    "title": "Semantos Unification Roadmap",
+    "snippet": "@@ -838,4 @@ (837 before, 5 after)\n- **v0.8** (2026-05-13, late evening) — **Phase P3 partial: K15 + K17 + K18 forward-looking both-sides specs shipped.** K15 (capability-UTXO binding): `CapabilityUtxoK15.lean` (5 sub-theorems proven) + `CapabilityRace.tla` (56 distinct states, no-double-spend invariant). K17 (tree-of-chains merge..."
+  }
+]
