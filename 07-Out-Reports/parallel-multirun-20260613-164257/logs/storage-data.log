@@ -1,0 +1,912 @@
+[PROFILE] deep preset applied (depth=4, nodes=160, time=10800s)
+╭────────────────────────────────── Shad Run ──────────────────────────────────╮
+│ Goal: Using                                                                  │
+│ /home/jake/.edwinpai/disciplines/semantos/01-Methodology/evidence-rules.md,  │
+│ recursively analyze Semantos storage and data model from semantos-core       │
+│ source.                                                                      │
+│                                                                              │
+│ Primary evidence: db/, core/, runtime/, packages/, schemas/config, tests,    │
+│ migrations/scripts if present. Docs are secondary only.                      │
+│                                                                              │
+│ Produce a source-grounded artifact with:                                     │
+│ - storage backends and persistence/data structures represented in code;      │
+│ - data model, event, and persistence flows;                                  │
+│ - concrete paths/symbols/configs/tests;                                      │
+│ - Mermaid storage/event-flow diagram;                                        │
+│ - doc-vs-implementation mismatch risks.                                      │
+│                                                                              │
+│ Stay in the storage/data lane.                                               │
+╰──────────────────────────────────────────────────────────────────────────────╯
+[SOURCES] /home/jake/.edwinpai/disciplines/semantos/sources-code (CLI)
+16:42:57 [INFO] shad.retrieval: Using qmd retriever
+[RETRIEVER] Using QmdRetriever
+[QMD] Ensuring source collections are provisioned and indexed...
+16:42:57 [INFO] shad.retrieval.qmd: [QMD] Collection 'sources-code' already exists for /home/jake/.edwinpai/disciplines/semantos/sources-code
+16:43:04 [INFO] shad.retrieval.qmd: [QMD] Index updated successfully
+16:43:05 [INFO] shad.retrieval.qmd: [QMD] Incremental embedding complete
+[QMD] ✓ sources-code
+[QMD_HYBRID] Enabled - BM25 + vector + RRF fusion + reranking
+[STRATEGY] Override: analysis
+[VERIFY] Level: basic
+[PROVIDER] edwin-gateway
+[MODELS] Custom model selection:
+  Orchestrator: gpt-5.5
+  Worker: gpt-5.5
+  Leaf: gpt-5.5
+16:43:05 [INFO] shad.cache.redis_cache: Connected to Redis at redis://localhost:6379/0
+16:43:05 [INFO] shad.engine.llm: [LLM] Max concurrent calls resolved to 8 (requested=None, env=None)
+16:43:05 [INFO] shad.engine.rlm: [RETRIEVAL] Using QmdRetriever
+16:43:05 [INFO] shad.engine.rlm: [CODE_MODE] Initialized CodeExecutor with collection: /home/jake/.edwinpai/disciplines/semantos/sources-code, collection: sources-code
+16:43:05 [INFO] shad.refinement.manager: State transition: pending → running
+16:43:05 [INFO] shad.engine.rlm: Starting run 904a0aa1-4ebd-418b-888d-c62cf08d2256 with goal: Using /home/jake/.edwinpai/disciplines/semantos/01-Methodology/evidence-rules.md, recursively analyze Semantos storage and data model from semantos-core source.
+
+Primary evidence: db/, core/, runtime/, packages/, schemas/config, tests, migrations/scripts if present. Docs are secondary only.
+
+Produce a source-grounded artifact with:
+- storage backends and persistence/data structures represented in code;
+- data model, event, and persistence flows;
+- concrete paths/symbols/configs/tests;
+- Mermaid storage/event-flow diagram;
+- doc-vs-implementation mismatch risks.
+
+Stay in the storage/data lane.
+16:43:05 [INFO] shad.engine.rlm: [STRATEGY] Selected: analysis (confidence: 1.00, override: True)
+16:43:05 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: using /home/jake/.edwinpai/disciplines/semantos/01-methodolo...
+16:43:09 [INFO] shad.engine.rlm: [RETRIEVAL] Found 10 results (hybrid+rerank+decay)
+16:43:09 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 2963 chars of context
+16:43:09 [INFO] shad.engine.decomposition: [DECOMPOSE] Starting decomposition for: Using /home/jake/.edwinpai/disciplines/semantos/01-Methodology/evidence-rules.md, recursively analyz...
+16:43:09 [INFO] shad.engine.decomposition: [DECOMPOSE] Strategy: analysis
+16:43:33 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+16:43:33 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+16:43:33 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+16:43:33 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Define explicit source-grounding criteria for the Semantos s...
+16:43:38 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+16:43:38 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1538 chars of context
+16:43:38 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1538 chars for subtask: Define explicit source-grounding criteria for the ...
+16:43:38 [INFO] shad.engine.decomposition: [DECOMPOSE] Starting decomposition for: Define explicit source-grounding criteria for the Semantos storage/data-model analysis: primary evid...
+16:43:38 [INFO] shad.engine.decomposition: [DECOMPOSE] Strategy: analysis
+16:44:05 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+16:44:05 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+16:44:05 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+16:44:05 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Define explicit source-grounding criteria for the Semantos s...
+16:44:09 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+16:44:09 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1486 chars of context
+16:44:09 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1486 chars for subtask: Define explicit source-grounding criteria for the ...
+16:44:09 [INFO] shad.engine.decomposition: [DECOMPOSE] Starting decomposition for: Define explicit source-grounding criteria for the Semantos storage/data-model analysis. Specify that...
+16:44:09 [INFO] shad.engine.decomposition: [DECOMPOSE] Strategy: analysis
+16:44:33 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+16:44:33 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+16:44:33 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+16:44:33 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Define the Semantos storage/data-model source-grounding crit...
+16:44:38 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+16:44:38 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1514 chars of context
+16:44:38 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1514 chars for subtask: Define the Semantos storage/data-model source-grou...
+16:44:38 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Define the Semantos storage/data-model source-grounding criteria upfront: primary evidence must come...
+16:44:38 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 7507 chars
+16:44:38 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+16:45:04 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+16:45:04 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for define_criteria: 20 keywords
+16:45:04 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+16:45:04 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+16:45:04 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Inventory all relevant primary evidence in semantos-core by ...
+16:45:09 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+16:45:09 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1512 chars of context
+16:45:09 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1512 chars for subtask: Inventory all relevant primary evidence in semanto...
+16:45:09 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Inventory all relevant primary evidence in semantos-core by scanning the required source paths for s...
+16:45:09 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 7505 chars
+16:45:09 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+16:47:33 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+16:47:33 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for gather_data: 20 keywords
+16:47:33 [INFO] shad.engine.rlm: [PARALLEL] Executing 2 nodes in parallel
+16:47:33 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 2 unique ready tasks
+16:47:33 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Document tradeoffs between possible grounding approaches: st...
+16:47:33 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Evaluate the gathered evidence against the completeness metr...
+16:47:36 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+16:47:36 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1578 chars of context
+16:47:37 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+16:47:37 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1621 chars of context
+16:47:37 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1621 chars for subtask: Evaluate the gathered evidence against the complet...
+16:47:37 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1578 chars for subtask: Document tradeoffs between possible grounding appr...
+16:47:37 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Evaluate the gathered evidence against the completeness metrics: enumerate every storage backend, pe...
+16:47:37 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 7614 chars
+16:47:37 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+16:49:54 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+16:49:54 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Document tradeoffs between possible grounding approaches: strict code-only evidence, code-first with...
+16:49:54 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 7571 chars
+16:49:54 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+16:50:33 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+16:50:33 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for analyze: 20 keywords
+16:50:33 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for compare_alternatives: 20 keywords
+16:50:33 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+16:50:33 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+16:50:33 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Produce the final source-grounding criteria and completeness...
+16:50:37 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+16:50:37 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1527 chars of context
+16:50:37 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1527 chars for subtask: Produce the final source-grounding criteria and co...
+16:50:37 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Produce the final source-grounding criteria and completeness checklist for the Semantos storage/data...
+16:50:37 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 7520 chars
+16:50:37 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+16:52:15 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+16:52:15 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for conclude: 20 keywords
+16:52:15 [INFO] shad.engine.llm: [SYNTHESIZE] Starting synthesis for: Define explicit source-grounding criteria for the Semantos storage/data-model analysis. Specify that...
+16:52:15 [INFO] shad.engine.llm: [SYNTHESIZE] Subtask results: 5
+16:52:15 [INFO] shad.engine.llm: [SYNTHESIZE] Context provided: 5991 chars
+16:53:31 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+16:53:31 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for define_criteria: 20 keywords
+16:53:31 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+16:53:31 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+16:53:31 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Collect primary evidence from the specified semantos-core so...
+16:53:35 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+16:53:35 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1461 chars of context
+16:53:35 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1461 chars for subtask: Collect primary evidence from the specified semant...
+16:53:35 [INFO] shad.engine.decomposition: [DECOMPOSE] Starting decomposition for: Collect primary evidence from the specified semantos-core source paths, prioritizing db/, core/, run...
+16:53:35 [INFO] shad.engine.decomposition: [DECOMPOSE] Strategy: analysis
+16:54:02 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+16:54:02 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+16:54:02 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+16:54:02 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Define explicit evidence-collection criteria before inspecti...
+16:54:06 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+16:54:06 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1460 chars of context
+16:54:06 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1460 chars for subtask: Define explicit evidence-collection criteria befor...
+16:54:06 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Define explicit evidence-collection criteria before inspecting files: relevant paths must prioritize...
+16:54:06 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 7428 chars
+16:54:06 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+16:55:15 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+16:55:15 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for define_criteria: 20 keywords
+16:55:15 [INFO] shad.engine.rlm: [PARALLEL] Executing 2 nodes in parallel
+16:55:15 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 2 unique ready tasks
+16:55:15 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Compare evidence-gathering approaches and document tradeoffs...
+16:55:15 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Collect primary evidence from the semantos-core repository u...
+16:55:19 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+16:55:19 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1498 chars of context
+16:55:19 [INFO] shad.engine.rlm: [RETRIEVAL] Found 3 results (hybrid+rerank+decay)
+16:55:19 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 972 chars of context
+16:55:19 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1498 chars for subtask: Collect primary evidence from the semantos-core re...
+16:55:19 [INFO] shad.engine.rlm: [CONTEXT] Injected 385 chars from soft deps: ['gather_data']
+16:55:19 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 972 chars for subtask: Compare evidence-gathering approaches and document...
+16:55:19 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Collect primary evidence from the semantos-core repository using the defined criteria. Start with va...
+16:55:19 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 7466 chars
+16:55:19 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+16:57:57 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+16:57:57 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Compare evidence-gathering approaches and document tradeoffs: targeted vault_context-first inspectio...
+16:57:57 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 7327 chars
+16:57:57 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+16:59:01 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+16:59:01 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for gather_data: 20 keywords
+16:59:01 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for compare_alternatives: 20 keywords
+16:59:01 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+16:59:01 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+16:59:01 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Evaluate gathered evidence against the criteria. Normalize r...
+16:59:06 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+16:59:06 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1419 chars of context
+16:59:06 [INFO] shad.engine.rlm: [CONTEXT] Injected 680 chars from soft deps: ['compare_alternatives']
+16:59:06 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1419 chars for subtask: Evaluate gathered evidence against the criteria. N...
+16:59:06 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Evaluate gathered evidence against the criteria. Normalize records into a consistent evidence table ...
+16:59:06 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 8069 chars
+16:59:06 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+17:00:45 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:00:45 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for analyze: 20 keywords
+17:00:45 [INFO] shad.engine.rlm: [PARALLEL] Executing 2 nodes in parallel
+17:00:45 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 2 unique ready tasks
+17:00:45 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: If findings are numerous, create a compact evidence map show...
+17:00:45 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Draw supported conclusions from the analyzed evidence. Summa...
+17:00:49 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+17:00:49 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1595 chars of context
+17:00:50 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+17:00:50 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1554 chars of context
+17:00:50 [INFO] shad.engine.rlm: [CONTEXT] Injected 680 chars from soft deps: ['visualize', 'compare_alternatives']
+17:00:50 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1554 chars for subtask: Draw supported conclusions from the analyzed evide...
+17:00:50 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1595 chars for subtask: If findings are numerous, create a compact evidenc...
+17:00:50 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Draw supported conclusions from the analyzed evidence. Summarize which semantos-core paths provide t...
+17:00:50 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 8204 chars
+17:00:50 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+17:02:27 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:02:27 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: If findings are numerous, create a compact evidence map showing relationships between source areas a...
+17:02:27 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 7563 chars
+17:02:27 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+17:02:59 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:02:59 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for conclude: 20 keywords
+17:02:59 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for visualize: 20 keywords
+17:02:59 [INFO] shad.engine.llm: [SYNTHESIZE] Starting synthesis for: Collect primary evidence from the specified semantos-core source paths, prioritizing db/, core/, run...
+17:02:59 [INFO] shad.engine.llm: [SYNTHESIZE] Subtask results: 6
+17:02:59 [INFO] shad.engine.llm: [SYNTHESIZE] Context provided: 5966 chars
+17:05:34 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:05:34 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for gather_data: 20 keywords
+17:05:34 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+17:05:34 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+17:05:34 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Compare evidence-source alternatives and document tradeoffs ...
+17:05:38 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+17:05:38 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1529 chars of context
+17:05:38 [INFO] shad.engine.rlm: [CONTEXT] Injected 1035 chars from soft deps: ['define_criteria']
+17:05:38 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1529 chars for subtask: Compare evidence-source alternatives and document ...
+17:05:38 [INFO] shad.engine.decomposition: [DECOMPOSE] Starting decomposition for: Compare evidence-source alternatives and document tradeoffs before analysis: direct implementation c...
+17:05:38 [INFO] shad.engine.decomposition: [DECOMPOSE] Strategy: analysis
+17:06:03 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:06:03 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+17:06:03 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+17:06:03 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Define explicit evidence-ranking criteria for the analysis. ...
+17:06:08 [INFO] shad.engine.rlm: [RETRIEVAL] Found 4 results (hybrid+rerank+decay)
+17:06:08 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1327 chars of context
+17:06:08 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1327 chars for subtask: Define explicit evidence-ranking criteria for the ...
+17:06:08 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Define explicit evidence-ranking criteria for the analysis. Metrics must include: source authority, ...
+17:06:08 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 8400 chars
+17:06:08 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+17:07:06 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:07:06 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for define_criteria: 20 keywords
+17:07:06 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+17:07:06 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+17:07:06 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Collect representative evidence from each alternative source...
+17:07:10 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+17:07:10 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1517 chars of context
+17:07:10 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1517 chars for subtask: Collect representative evidence from each alternat...
+17:07:10 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Collect representative evidence from each alternative source category: direct implementation code, t...
+17:07:10 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 8590 chars
+17:07:10 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+17:08:43 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:08:43 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for gather_data: 20 keywords
+17:08:43 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+17:08:43 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+17:08:43 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Compare evidence-source alternatives before substantive anal...
+17:08:48 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+17:08:48 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1505 chars of context
+17:08:48 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1505 chars for subtask: Compare evidence-source alternatives before substa...
+17:08:48 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Compare evidence-source alternatives before substantive analysis: direct implementation code versus ...
+17:08:48 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 8578 chars
+17:08:48 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+17:09:58 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:09:58 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for compare_alternatives: 20 keywords
+17:09:58 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+17:09:58 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+17:09:58 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Evaluate the gathered evidence against the defined criteria ...
+17:10:01 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+17:10:01 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1497 chars of context
+17:10:01 [INFO] shad.engine.rlm: [CONTEXT] Injected 1473 chars from soft deps: ['gather_data']
+17:10:01 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1497 chars for subtask: Evaluate the gathered evidence against the defined...
+17:10:01 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Evaluate the gathered evidence against the defined criteria and tradeoff matrix. Resolve conflicts b...
+17:10:01 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 10045 chars
+17:10:01 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+17:10:50 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:10:50 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for analyze: 20 keywords
+17:10:50 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+17:10:50 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+17:10:50 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Draw supported conclusions about how evidence sources should...
+17:10:55 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+17:10:55 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1471 chars of context
+17:10:55 [INFO] shad.engine.rlm: [CONTEXT] Injected 1005 chars from soft deps: ['compare_alternatives']
+17:10:55 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1471 chars for subtask: Draw supported conclusions about how evidence sour...
+17:10:55 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Draw supported conclusions about how evidence sources should be weighted in the Semantos storage/dat...
+17:10:55 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 9551 chars
+17:10:55 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+17:11:43 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:11:43 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for conclude: 20 keywords
+17:11:43 [INFO] shad.engine.llm: [SYNTHESIZE] Starting synthesis for: Compare evidence-source alternatives and document tradeoffs before analysis: direct implementation c...
+17:11:43 [INFO] shad.engine.llm: [SYNTHESIZE] Subtask results: 5
+17:11:43 [INFO] shad.engine.llm: [SYNTHESIZE] Context provided: 7071 chars
+17:13:02 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:13:02 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for compare_alternatives: 20 keywords
+17:13:02 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+17:13:02 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+17:13:02 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Evaluate gathered evidence against the explicit criteria. Bu...
+17:13:06 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+17:13:06 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1421 chars of context
+17:13:06 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1421 chars for subtask: Evaluate gathered evidence against the explicit cr...
+17:13:06 [INFO] shad.engine.decomposition: [DECOMPOSE] Starting decomposition for: Evaluate gathered evidence against the explicit criteria. Build an inventory of all storage backends...
+17:13:06 [INFO] shad.engine.decomposition: [DECOMPOSE] Strategy: analysis
+17:13:38 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:13:38 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+17:13:38 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+17:13:38 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Define explicit evaluation criteria and measurement rules be...
+17:13:43 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+17:13:43 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1452 chars of context
+17:13:43 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1452 chars for subtask: Define explicit evaluation criteria and measuremen...
+17:13:43 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Define explicit evaluation criteria and measurement rules before inspecting evidence: (1) storage ba...
+17:13:43 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 7380 chars
+17:13:43 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+17:14:40 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:14:40 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for define_criteria: 20 keywords
+17:14:40 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+17:14:40 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+17:14:40 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Collect and normalize all available evidence from the provid...
+17:14:44 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+17:14:44 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1434 chars of context
+17:14:44 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1434 chars for subtask: Collect and normalize all available evidence from ...
+17:14:44 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Collect and normalize all available evidence from the provided vault context and any expected reposi...
+17:14:44 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 7362 chars
+17:14:44 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+17:17:28 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:17:28 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for gather_data: 20 keywords
+17:17:28 [INFO] shad.engine.rlm: [PARALLEL] Executing 2 nodes in parallel
+17:17:28 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 2 unique ready tasks
+17:17:28 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Evaluate the gathered evidence against the explicit criteria...
+17:17:28 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Compare alternative interpretations where evidence is ambigu...
+17:17:32 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+17:17:32 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1400 chars of context
+17:17:33 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+17:17:33 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1594 chars of context
+17:17:33 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1400 chars for subtask: Evaluate the gathered evidence against the explici...
+17:17:33 [INFO] shad.engine.rlm: [CONTEXT] Injected 1070 chars from soft deps: ['analyze']
+17:17:33 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1594 chars for subtask: Compare alternative interpretations where evidence...
+17:17:33 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Evaluate the gathered evidence against the explicit criteria by building the required inventories: a...
+17:17:33 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 7328 chars
+17:17:33 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+17:19:25 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:19:25 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Compare alternative interpretations where evidence is ambiguous: whether generated crystallization/p...
+17:19:25 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 8594 chars
+17:19:25 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+17:20:33 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:20:33 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for analyze: 20 keywords
+17:20:33 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for compare_alternatives: 20 keywords
+17:20:33 [INFO] shad.engine.rlm: [PARALLEL] Executing 2 nodes in parallel
+17:20:33 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 2 unique ready tasks
+17:20:33 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Create concise visual summaries if useful for review: a matr...
+17:20:33 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Draw supported conclusions from the analyzed inventory: summ...
+17:20:37 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+17:20:37 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1609 chars of context
+17:20:37 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+17:20:37 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1514 chars of context
+17:20:37 [INFO] shad.engine.rlm: [CONTEXT] Injected 1984 chars from soft deps: ['compare_alternatives', 'visualize']
+17:20:37 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1609 chars for subtask: Draw supported conclusions from the analyzed inven...
+17:20:37 [INFO] shad.engine.rlm: [CONTEXT] Injected 1667 chars from soft deps: ['compare_alternatives']
+17:20:37 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1514 chars for subtask: Create concise visual summaries if useful for revi...
+17:20:37 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Draw supported conclusions from the analyzed inventory: summarize confirmed storage/persistence arch...
+17:20:37 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 9523 chars
+17:20:37 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+17:22:02 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:22:02 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Create concise visual summaries if useful for review: a matrix mapping evidence categories to source...
+17:22:02 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 9111 chars
+17:22:02 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+17:22:54 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:22:54 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for conclude: 20 keywords
+17:22:54 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for visualize: 20 keywords
+17:22:54 [INFO] shad.engine.llm: [SYNTHESIZE] Starting synthesis for: Evaluate gathered evidence against the explicit criteria. Build an inventory of all storage backends...
+17:22:54 [INFO] shad.engine.llm: [SYNTHESIZE] Subtask results: 6
+17:22:54 [INFO] shad.engine.llm: [SYNTHESIZE] Context provided: 5926 chars
+17:25:20 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:25:20 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for analyze: 20 keywords
+17:25:20 [INFO] shad.engine.rlm: [PARALLEL] Executing 2 nodes in parallel
+17:25:20 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 2 unique ready tasks
+17:25:20 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Draw supported conclusions from the analysis. Summarize comp...
+17:25:20 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Create compact representations if useful: a storage/data-flo...
+17:25:24 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+17:25:24 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1659 chars of context
+17:25:25 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+17:25:25 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1281 chars of context
+17:25:25 [INFO] shad.engine.rlm: [CONTEXT] Injected 694 chars from soft deps: ['visualize']
+17:25:25 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1281 chars for subtask: Draw supported conclusions from the analysis. Summ...
+17:25:25 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1659 chars for subtask: Create compact representations if useful: a storag...
+17:25:25 [INFO] shad.engine.decomposition: [DECOMPOSE] Starting decomposition for: Draw supported conclusions from the analysis. Summarize completeness against the defined metrics, li...
+17:25:25 [INFO] shad.engine.decomposition: [DECOMPOSE] Strategy: analysis
+17:25:47 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:25:47 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+17:25:47 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+17:25:47 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Define explicit conclusion criteria for the Semantos storage...
+17:25:47 [INFO] shad.engine.decomposition: [DECOMPOSE] Starting decomposition for: Create compact representations if useful: a storage/data-flow map showing backend-to-structure-to-ev...
+17:25:47 [INFO] shad.engine.decomposition: [DECOMPOSE] Strategy: analysis
+17:26:12 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:26:12 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+17:26:12 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+17:26:12 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Define source-grounded analysis criteria before inspecting f...
+17:26:12 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+17:26:12 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1353 chars of context
+17:26:12 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1353 chars for subtask: Define explicit conclusion criteria for the Semant...
+17:26:12 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Define explicit conclusion criteria for the Semantos storage/data-model analysis: completeness again...
+17:26:12 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 7837 chars
+17:26:12 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+17:27:53 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:27:53 [WARNING] shad.retrieval.qmd: qmd search timed out after 65s
+17:27:53 [INFO] shad.engine.rlm: [RETRIEVAL] Hybrid search empty, falling back to vector for: Define source-grounded analysis criteria before inspecting f...
+17:27:53 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for define_criteria: 20 keywords
+17:27:53 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+17:27:53 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+17:27:53 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Collect and organize the completed dependency evidence from ...
+17:27:57 [INFO] shad.engine.rlm: [RETRIEVAL] No results found for: Define source-grounded analysis criteria before inspecting f...
+17:27:57 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Define source-grounded analysis criteria before inspecting findings: identify storage/data elements,...
+17:27:57 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 6164 chars
+17:27:57 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+17:29:10 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:29:10 [WARNING] shad.retrieval.qmd: qmd search timed out after 65s
+17:29:10 [INFO] shad.engine.rlm: [RETRIEVAL] Hybrid search empty, falling back to vector for: Collect and organize the completed dependency evidence from ...
+17:29:10 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for define_criteria: 20 keywords
+17:29:10 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+17:29:10 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+17:29:10 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Collect relevant source evidence from the provided vault con...
+17:29:13 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+17:29:13 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1519 chars of context
+17:29:13 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1519 chars for subtask: Collect relevant source evidence from the provided...
+17:29:13 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Collect relevant source evidence from the provided vault context and any source files it points to, ...
+17:29:13 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 7685 chars
+17:29:13 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+17:32:19 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:32:19 [WARNING] shad.retrieval.qmd: qmd search timed out after 65s
+17:32:19 [INFO] shad.engine.rlm: [RETRIEVAL] No results found for: Collect and organize the completed dependency evidence from ...
+17:32:19 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Collect and organize the completed dependency evidence from the vault context, including visualize o...
+17:32:19 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 6482 chars
+17:32:19 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+17:33:16 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:33:16 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for gather_data: 20 keywords
+17:33:16 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+17:33:16 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+17:33:16 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Evaluate each storage/data element and backend-to-structure-...
+17:33:16 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for gather_data: 20 keywords
+17:33:16 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+17:33:16 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+17:33:16 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Evaluate gathered evidence against the defined criteria. Cla...
+17:33:20 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+17:33:20 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1412 chars of context
+17:33:20 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1412 chars for subtask: Evaluate gathered evidence against the defined cri...
+17:33:20 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Evaluate gathered evidence against the defined criteria. Classify storage/data-model findings into h...
+17:33:20 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 7896 chars
+17:33:20 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+17:34:33 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:34:33 [WARNING] shad.retrieval.qmd: qmd search timed out after 65s
+17:34:33 [INFO] shad.engine.rlm: [RETRIEVAL] Hybrid search empty, falling back to vector for: Evaluate each storage/data element and backend-to-structure-...
+17:34:33 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for analyze: 20 keywords
+17:34:33 [INFO] shad.engine.rlm: [PARALLEL] Executing 2 nodes in parallel
+17:34:33 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 2 unique ready tasks
+17:34:33 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Compare alternative interpretations where evidence is ambigu...
+17:34:33 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Draw the final supported conclusions for the Semantos storag...
+17:34:37 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+17:34:37 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1542 chars of context
+17:34:37 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+17:34:37 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1406 chars of context
+17:34:37 [INFO] shad.engine.rlm: [CONTEXT] Injected 2499 chars from soft deps: ['gather_data']
+17:34:37 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1542 chars for subtask: Compare alternative interpretations where evidence...
+17:34:37 [INFO] shad.engine.rlm: [CONTEXT] Injected 1667 chars from soft deps: ['compare_alternatives']
+17:34:37 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1406 chars for subtask: Draw the final supported conclusions for the Seman...
+17:34:37 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Compare alternative interpretations where evidence is ambiguous, such as intended architecture versu...
+17:34:37 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 10527 chars
+17:34:37 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+17:36:06 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:36:06 [WARNING] shad.retrieval.qmd: qmd search timed out after 65s
+17:36:06 [INFO] shad.engine.rlm: [RETRIEVAL] No results found for: Evaluate each storage/data element and backend-to-structure-...
+17:36:06 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Draw the final supported conclusions for the Semantos storage/data-model analysis. Summarize complet...
+17:36:06 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 9559 chars
+17:36:06 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+17:37:45 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:37:45 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for compare_alternatives: 20 keywords
+17:37:45 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for conclude: 20 keywords
+17:37:45 [INFO] shad.engine.llm: [SYNTHESIZE] Starting synthesis for: Draw supported conclusions from the analysis. Summarize completeness against the defined metrics, li...
+17:37:45 [INFO] shad.engine.llm: [SYNTHESIZE] Subtask results: 5
+17:37:45 [INFO] shad.engine.llm: [SYNTHESIZE] Context provided: 6482 chars
+17:39:29 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:39:29 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Evaluate each storage/data element and backend-to-structure-to-event/config relationship against the...
+17:39:29 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 6164 chars
+17:39:29 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+17:41:24 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:41:24 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for analyze: 20 keywords
+17:41:24 [INFO] shad.engine.rlm: [PARALLEL] Executing 3 nodes in parallel
+17:41:24 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 3 unique ready tasks
+17:41:24 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Create compact secondary visualizations only where they clar...
+17:41:24 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Draw supported conclusions from the criteria-based analysis,...
+17:41:24 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Document tradeoffs for compact representation choices: stora...
+17:41:27 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+17:41:27 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1450 chars of context
+17:41:27 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+17:41:27 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1594 chars of context
+17:41:28 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+17:41:28 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1333 chars of context
+17:41:28 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1333 chars for subtask: Document tradeoffs for compact representation choi...
+17:41:28 [INFO] shad.engine.rlm: [CONTEXT] Injected 2686 chars from soft deps: ['visualize', 'compare_alternatives']
+17:41:28 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1594 chars for subtask: Draw supported conclusions from the criteria-based...
+17:41:28 [INFO] shad.engine.rlm: [CONTEXT] Injected 2035 chars from soft deps: ['compare_alternatives']
+17:41:28 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1450 chars for subtask: Create compact secondary visualizations only where...
+17:41:28 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Document tradeoffs for compact representation choices: storage/data-flow map versus prose-only findi...
+17:41:28 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 7499 chars
+17:41:28 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+17:42:22 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:42:22 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Draw supported conclusions from the criteria-based analysis, emphasizing confirmed relationships, co...
+17:42:22 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 10448 chars
+17:42:22 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+17:43:38 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:43:38 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Create compact secondary visualizations only where they clarify the source-grounded analysis: a stor...
+17:43:38 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 9653 chars
+17:43:38 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+17:44:47 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:44:47 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for compare_alternatives: 20 keywords
+17:44:47 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for conclude: 20 keywords
+17:44:47 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for visualize: 20 keywords
+17:44:47 [INFO] shad.engine.llm: [SYNTHESIZE] Starting synthesis for: Create compact representations if useful: a storage/data-flow map showing backend-to-structure-to-ev...
+17:44:47 [INFO] shad.engine.llm: [SYNTHESIZE] Subtask results: 6
+17:44:47 [INFO] shad.engine.llm: [SYNTHESIZE] Context provided: 6164 chars
+17:46:13 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:46:13 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for conclude: 20 keywords
+17:46:13 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for visualize: 20 keywords
+17:46:13 [INFO] shad.engine.llm: [SYNTHESIZE] Starting synthesis for: Define explicit source-grounding criteria for the Semantos storage/data-model analysis: primary evid...
+17:46:13 [INFO] shad.engine.llm: [SYNTHESIZE] Subtask results: 6
+17:46:13 [INFO] shad.engine.llm: [SYNTHESIZE] Context provided: 4503 chars
+17:47:59 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:47:59 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for define_criteria: 20 keywords
+17:47:59 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+17:47:59 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+17:47:59 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Read /home/jake/.edwinpai/disciplines/semantos/01-Methodolog...
+17:48:03 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+17:48:03 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1501 chars of context
+17:48:03 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1501 chars for subtask: Read /home/jake/.edwinpai/disciplines/semantos/01-...
+17:48:03 [INFO] shad.engine.decomposition: [DECOMPOSE] Starting decomposition for: Read /home/jake/.edwinpai/disciplines/semantos/01-Methodology/evidence-rules.md and recursively insp...
+17:48:03 [INFO] shad.engine.decomposition: [DECOMPOSE] Strategy: analysis
+17:48:26 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:48:26 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+17:48:26 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+17:48:26 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Define explicit evidence-collection criteria before inspecti...
+17:48:30 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+17:48:30 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1427 chars of context
+17:48:30 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1427 chars for subtask: Define explicit evidence-collection criteria befor...
+17:48:30 [INFO] shad.engine.decomposition: [DECOMPOSE] Starting decomposition for: Define explicit evidence-collection criteria before inspecting the repository: required evidence for...
+17:48:30 [INFO] shad.engine.decomposition: [DECOMPOSE] Strategy: analysis
+17:48:59 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:48:59 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+17:48:59 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+17:48:59 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Define the evidence-collection protocol before repository in...
+17:49:04 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+17:49:04 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1419 chars of context
+17:49:04 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1419 chars for subtask: Define the evidence-collection protocol before rep...
+17:49:04 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Define the evidence-collection protocol before repository inspection: every finding must record path...
+17:49:04 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 7316 chars
+17:49:04 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+17:49:56 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:49:56 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for define_criteria: 20 keywords
+17:49:56 [INFO] shad.engine.rlm: [PARALLEL] Executing 2 nodes in parallel
+17:49:56 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 2 unique ready tasks
+17:49:56 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Document tradeoffs between breadth-first repository mapping ...
+17:49:56 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Inspect the repository according to the defined priority ord...
+17:49:59 [INFO] shad.engine.rlm: [RETRIEVAL] Found 2 results (hybrid+rerank+decay)
+17:49:59 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 556 chars of context
+17:50:00 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+17:50:00 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1477 chars of context
+17:50:00 [INFO] shad.engine.rlm: [CONTEXT] Injected 2350 chars from soft deps: ['compare_alternatives']
+17:50:00 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 556 chars for subtask: Inspect the repository according to the defined pr...
+17:50:00 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1477 chars for subtask: Document tradeoffs between breadth-first repositor...
+17:50:00 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Inspect the repository according to the defined priority order. For each candidate persistence-relat...
+17:50:00 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 8805 chars
+17:50:00 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+17:52:22 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:52:22 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Document tradeoffs between breadth-first repository mapping and depth-first inspection of high-prior...
+17:52:22 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 7374 chars
+17:52:22 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+17:53:32 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:53:32 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for gather_data: 20 keywords
+17:53:32 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for compare_alternatives: 20 keywords
+17:53:32 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+17:53:32 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+17:53:32 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Evaluate collected evidence against the coverage metrics and...
+17:53:36 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+17:53:36 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1656 chars of context
+17:53:36 [INFO] shad.engine.rlm: [CONTEXT] Injected 2673 chars from soft deps: ['compare_alternatives']
+17:53:36 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1656 chars for subtask: Evaluate collected evidence against the coverage m...
+17:53:36 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Evaluate collected evidence against the coverage metrics and confidence taxonomy. Identify which per...
+17:53:36 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 10228 chars
+17:53:36 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+17:55:32 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:55:32 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for analyze: 20 keywords
+17:55:32 [INFO] shad.engine.rlm: [PARALLEL] Executing 2 nodes in parallel
+17:55:32 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 2 unique ready tasks
+17:55:32 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Create a compact coverage matrix mapping persistence categor...
+17:55:32 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Draw supported conclusions about repository persistence cove...
+17:55:35 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+17:55:35 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1416 chars of context
+17:55:36 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+17:55:36 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1493 chars of context
+17:55:36 [INFO] shad.engine.rlm: [CONTEXT] Injected 1341 chars from soft deps: ['visualize']
+17:55:36 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1416 chars for subtask: Draw supported conclusions about repository persis...
+17:55:36 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1493 chars for subtask: Create a compact coverage matrix mapping persisten...
+17:55:36 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Draw supported conclusions about repository persistence coverage based only on collected evidence. S...
+17:55:36 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 8656 chars
+17:55:36 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+17:57:16 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:57:16 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Create a compact coverage matrix mapping persistence categories to repository areas, evidence refere...
+17:57:16 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 7390 chars
+17:57:16 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+17:58:18 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+17:58:18 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for conclude: 20 keywords
+17:58:18 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for visualize: 20 keywords
+17:58:18 [INFO] shad.engine.llm: [SYNTHESIZE] Starting synthesis for: Define explicit evidence-collection criteria before inspecting the repository: required evidence for...
+17:58:18 [INFO] shad.engine.llm: [SYNTHESIZE] Subtask results: 6
+17:58:18 [INFO] shad.engine.llm: [SYNTHESIZE] Context provided: 5895 chars
+18:00:09 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+18:00:09 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for define_criteria: 20 keywords
+18:00:09 [INFO] shad.engine.rlm: [PARALLEL] Executing 2 nodes in parallel
+18:00:09 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 2 unique ready tasks
+18:00:09 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Recursively inventory the semantos-core source tree at /home...
+18:00:09 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Read /home/jake/.edwinpai/disciplines/semantos/01-Methodolog...
+18:00:13 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+18:00:13 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1548 chars of context
+18:00:14 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+18:00:14 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1346 chars of context
+18:00:14 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1548 chars for subtask: Read /home/jake/.edwinpai/disciplines/semantos/01-...
+18:00:14 [INFO] shad.engine.rlm: [CONTEXT] Injected 2842 chars from soft deps: ['gather_data']
+18:00:14 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1346 chars for subtask: Recursively inventory the semantos-core source tre...
+18:00:14 [INFO] shad.engine.decomposition: [DECOMPOSE] Starting decomposition for: Read /home/jake/.edwinpai/disciplines/semantos/01-Methodology/evidence-rules.md and extract the mand...
+18:00:14 [INFO] shad.engine.decomposition: [DECOMPOSE] Strategy: analysis
+18:00:34 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+18:00:34 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+18:00:34 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+18:00:34 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Define extraction criteria before reading the methodology fi...
+18:00:34 [INFO] shad.engine.decomposition: [DECOMPOSE] Starting decomposition for: Recursively inventory the semantos-core source tree at /home/jake/.edwinpai/disciplines/semantos/sta...
+18:00:34 [INFO] shad.engine.decomposition: [DECOMPOSE] Strategy: analysis
+18:01:07 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+18:01:07 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+18:01:07 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+18:01:07 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Define explicit inventory criteria and metrics before scanni...
+18:01:07 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+18:01:07 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1361 chars of context
+18:01:07 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1361 chars for subtask: Define extraction criteria before reading the meth...
+18:01:07 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Define extraction criteria before reading the methodology file: identify four required output catego...
+18:01:07 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 7379 chars
+18:01:07 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+18:01:41 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+18:01:41 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+18:01:41 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1642 chars of context
+18:01:41 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1642 chars for subtask: Define explicit inventory criteria and metrics bef...
+18:01:41 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for define_criteria: 20 keywords
+18:01:41 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+18:01:41 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+18:01:41 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Define explicit inventory criteria and metrics before scanning: prioritized path order (`db/`, `core...
+18:01:41 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 10302 chars
+18:01:41 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+18:03:03 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+18:03:03 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Read /home/jake/.edwinpai/disciplines/semantos/01-Methodolog...
+18:03:03 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for define_criteria: 20 keywords
+18:03:03 [INFO] shad.engine.rlm: [PARALLEL] Executing 2 nodes in parallel
+18:03:03 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 2 unique ready tasks
+18:03:03 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Compare inventory approaches and document tradeoffs: full re...
+18:03:03 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Recursively scan `/home/jake/.edwinpai/disciplines/semantos/...
+18:03:07 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+18:03:07 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1467 chars of context
+18:03:07 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1467 chars for subtask: Read /home/jake/.edwinpai/disciplines/semantos/01-...
+18:03:07 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Read /home/jake/.edwinpai/disciplines/semantos/01-Methodology/evidence-rules.md directly and collect...
+18:03:07 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 7485 chars
+18:03:07 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+18:03:50 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+18:03:50 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+18:03:50 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1645 chars of context
+18:03:50 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+18:03:50 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1503 chars of context
+18:03:50 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1503 chars for subtask: Recursively scan `/home/jake/.edwinpai/disciplines...
+18:03:50 [INFO] shad.engine.rlm: [CONTEXT] Injected 2842 chars from soft deps: ['gather_data']
+18:03:50 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1645 chars for subtask: Compare inventory approaches and document tradeoff...
+18:03:50 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for gather_data: 20 keywords
+18:03:50 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+18:03:50 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+18:03:50 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Compare inventory approaches and document tradeoffs: full recursive static scan versus targeted grep...
+18:03:50 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 13149 chars
+18:03:50 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+18:05:22 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+18:05:22 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Recursively scan `/home/jake/.edwinpai/disciplines/semantos/state/semantos-core-repo` in the defined...
+18:05:22 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 10163 chars
+18:05:22 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+18:09:13 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+18:09:13 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Classify the gathered passages into the four required catego...
+18:09:13 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for gather_data: 20 keywords
+18:09:13 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for compare_alternatives: 20 keywords
+18:09:13 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+18:09:13 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+18:09:13 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Evaluate gathered files and symbols against the explicit cri...
+18:09:17 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+18:09:17 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1367 chars of context
+18:09:17 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1367 chars for subtask: Classify the gathered passages into the four requi...
+18:09:17 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Classify the gathered passages into the four required categories. Evaluate each candidate rule again...
+18:09:17 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 7385 chars
+18:09:17 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+18:10:29 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+18:10:29 [WARNING] shad.retrieval.qmd: qmd search timed out after 65s
+18:10:29 [INFO] shad.engine.rlm: [RETRIEVAL] Hybrid search empty, falling back to vector for: Evaluate gathered files and symbols against the explicit cri...
+18:10:29 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for analyze: 20 keywords
+18:10:29 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+18:10:29 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+18:10:29 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Produce the final extracted rule set for use in the inspecti...
+18:10:32 [INFO] shad.engine.rlm: [RETRIEVAL] Found 4 results (hybrid+rerank+decay)
+18:10:32 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1399 chars of context
+18:10:32 [INFO] shad.engine.rlm: [CONTEXT] Injected 3028 chars from soft deps: ['compare_alternatives']
+18:10:32 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1399 chars for subtask: Evaluate gathered files and symbols against the ex...
+18:10:32 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Evaluate gathered files and symbols against the explicit criteria. Classify each candidate by concer...
+18:10:32 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 13089 chars
+18:10:32 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+18:11:51 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+18:11:51 [WARNING] shad.retrieval.qmd: qmd search timed out after 65s
+18:11:51 [INFO] shad.engine.rlm: [RETRIEVAL] Hybrid search empty, falling back to vector for: Produce the final extracted rule set for use in the inspecti...
+18:11:51 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for analyze: 20 keywords
+18:11:51 [INFO] shad.engine.rlm: [PARALLEL] Executing 2 nodes in parallel
+18:11:51 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 2 unique ready tasks
+18:11:51 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Produce the final inventory conclusions: prioritized list of...
+18:11:51 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Create a compact representation of findings if it helps inte...
+18:11:54 [INFO] shad.engine.rlm: [RETRIEVAL] Found 4 results (hybrid+rerank+decay)
+18:11:54 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1201 chars of context
+18:11:54 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1201 chars for subtask: Produce the final extracted rule set for use in th...
+18:11:54 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Produce the final extracted rule set for use in the inspection. Include only supported conclusions: ...
+18:11:54 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 7219 chars
+18:11:54 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+18:12:52 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+18:12:52 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+18:12:52 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1288 chars of context
+18:12:52 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+18:12:52 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1708 chars of context
+18:12:52 [INFO] shad.engine.rlm: [CONTEXT] Injected 4672 chars from soft deps: ['visualize', 'compare_alternatives']
+18:12:52 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1708 chars for subtask: Produce the final inventory conclusions: prioritiz...
+18:12:52 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1288 chars for subtask: Create a compact representation of findings if it ...
+18:12:52 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for conclude: 20 keywords
+18:12:52 [INFO] shad.engine.llm: [SYNTHESIZE] Starting synthesis for: Read /home/jake/.edwinpai/disciplines/semantos/01-Methodology/evidence-rules.md and extract the mand...
+18:12:52 [INFO] shad.engine.llm: [SYNTHESIZE] Subtask results: 4
+18:12:52 [INFO] shad.engine.llm: [SYNTHESIZE] Context provided: 6016 chars
+18:14:07 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+18:14:07 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Create a compact representation of findings if it helps interpretation: directory-priority coverage ...
+18:14:07 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 9948 chars
+18:14:07 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+18:15:04 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+18:15:04 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Produce the final inventory conclusions: prioritized list of relevant files/modules/symbols; stronge...
+18:15:04 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 15042 chars
+18:15:04 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+18:17:17 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+18:17:17 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for conclude: 20 keywords
+18:17:17 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for visualize: 20 keywords
+18:17:17 [INFO] shad.engine.llm: [SYNTHESIZE] Starting synthesis for: Recursively inventory the semantos-core source tree at /home/jake/.edwinpai/disciplines/semantos/sta...
+18:17:17 [INFO] shad.engine.llm: [SYNTHESIZE] Subtask results: 6
+18:17:17 [INFO] shad.engine.llm: [SYNTHESIZE] Context provided: 8658 chars
+18:19:51 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+18:19:51 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for gather_data: 20 keywords
+18:19:51 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for gather_data: 20 keywords
+18:19:51 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+18:19:51 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+18:19:51 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Evaluate collected code evidence against the criteria: class...
+18:19:55 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+18:19:55 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1477 chars of context
+18:19:55 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1477 chars for subtask: Evaluate collected code evidence against the crite...
+18:19:55 [INFO] shad.engine.decomposition: [DECOMPOSE] Starting decomposition for: Evaluate collected code evidence against the criteria: classify each finding by category—storage bac...
+18:19:55 [INFO] shad.engine.decomposition: [DECOMPOSE] Strategy: analysis
+18:20:24 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+18:20:24 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+18:20:24 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+18:20:24 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Define explicit classification and evidence-quality criteria...
+18:20:28 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+18:20:28 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1422 chars of context
+18:20:28 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1422 chars for subtask: Define explicit classification and evidence-qualit...
+18:20:28 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Define explicit classification and evidence-quality criteria before reviewing code: categories are s...
+18:20:28 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 7369 chars
+18:20:28 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+18:21:45 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+18:21:45 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for define_criteria: 20 keywords
+18:21:45 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+18:21:45 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+18:21:45 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Collect and normalize all provided vault_context sources and...
+18:21:49 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+18:21:49 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1577 chars of context
+18:21:49 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1577 chars for subtask: Collect and normalize all provided vault_context s...
+18:21:49 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Collect and normalize all provided vault_context sources and any referenced source paths into an evi...
+18:21:49 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 7524 chars
+18:21:49 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+18:24:24 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+18:24:24 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for gather_data: 20 keywords
+18:24:24 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+18:24:24 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+18:24:24 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Compare alternative classification choices for evidence that...
+18:24:29 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+18:24:29 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1461 chars of context
+18:24:29 [INFO] shad.engine.rlm: [CONTEXT] Injected 4348 chars from soft deps: ['define_criteria']
+18:24:29 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1461 chars for subtask: Compare alternative classification choices for evi...
+18:24:29 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Compare alternative classification choices for evidence that could fit multiple categories, such as ...
+18:24:29 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 11758 chars
+18:24:29 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+18:25:23 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+18:25:23 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for compare_alternatives: 20 keywords
+18:25:23 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+18:25:23 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+18:25:23 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Evaluate each collected candidate against the explicit crite...
+18:25:26 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+18:25:26 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1453 chars of context
+18:25:26 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1453 chars for subtask: Evaluate each collected candidate against the expl...
+18:25:26 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Evaluate each collected candidate against the explicit criteria. Assign exactly one primary category...
+18:25:26 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 7400 chars
+18:25:26 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+18:27:34 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+18:27:34 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for analyze: 20 keywords
+18:27:34 [INFO] shad.engine.rlm: [PARALLEL] Executing 2 nodes in parallel
+18:27:34 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 2 unique ready tasks
+18:27:34 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Draw supported conclusions from the classified evidence. Sum...
+18:27:34 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Create a compact matrix or table mapping categories to findi...
+18:27:37 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+18:27:37 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1539 chars of context
+18:27:37 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+18:27:37 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1138 chars of context
+18:27:37 [INFO] shad.engine.rlm: [CONTEXT] Injected 2004 chars from soft deps: ['visualize']
+18:27:37 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1539 chars for subtask: Draw supported conclusions from the classified evi...
+18:27:37 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1138 chars for subtask: Create a compact matrix or table mapping categorie...
+18:27:37 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Draw supported conclusions from the classified evidence. Summarize which persistence-related categor...
+18:27:37 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 9492 chars
+18:27:37 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+18:29:12 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+18:29:12 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Create a compact matrix or table mapping categories to findings, references, confidence, and gaps. I...
+18:29:12 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 7085 chars
+18:29:12 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+18:29:55 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+18:29:55 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for conclude: 20 keywords
+18:29:55 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for visualize: 20 keywords
+18:29:55 [INFO] shad.engine.llm: [SYNTHESIZE] Starting synthesis for: Evaluate collected code evidence against the criteria: classify each finding by category—storage bac...
+18:29:55 [INFO] shad.engine.llm: [SYNTHESIZE] Subtask results: 6
+18:29:55 [INFO] shad.engine.llm: [SYNTHESIZE] Context provided: 5945 chars
+18:31:30 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+18:31:30 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for analyze: 20 keywords
+18:31:30 [INFO] shad.engine.rlm: [PARALLEL] Executing 2 nodes in parallel
+18:31:30 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 2 unique ready tasks
+18:31:30 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Produce a supported evidence summary suitable for storage: l...
+18:31:30 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Compare alternative interpretations where evidence is ambigu...
+18:31:34 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+18:31:34 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1511 chars of context
+18:31:34 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+18:31:34 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1514 chars of context
+18:31:34 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1514 chars for subtask: Compare alternative interpretations where evidence...
+18:31:34 [INFO] shad.engine.rlm: [CONTEXT] Injected 3350 chars from soft deps: ['compare_alternatives']
+18:31:34 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1511 chars for subtask: Produce a supported evidence summary suitable for ...
+18:31:34 [INFO] shad.engine.decomposition: [DECOMPOSE] Starting decomposition for: Compare alternative interpretations where evidence is ambiguous, such as whether a module is authori...
+18:31:34 [INFO] shad.engine.decomposition: [DECOMPOSE] Strategy: analysis
+18:32:07 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+18:32:07 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+18:32:07 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+18:32:07 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Define explicit evidence-classification criteria for determi...
+18:32:07 [INFO] shad.engine.decomposition: [DECOMPOSE] Starting decomposition for: Produce a supported evidence summary suitable for storage: list confirmed persistence/storage archit...
+18:32:07 [INFO] shad.engine.decomposition: [DECOMPOSE] Strategy: analysis
+18:32:39 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+18:32:39 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+18:32:39 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+18:32:39 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Define the evidence-summary criteria before inspection: requ...
+18:32:39 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+18:32:39 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1598 chars of context
+18:32:39 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1598 chars for subtask: Define explicit evidence-classification criteria f...
+18:32:39 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Define explicit evidence-classification criteria for determining whether each ambiguous module is an...
+18:32:39 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 7582 chars
+18:32:39 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+18:34:05 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+18:34:05 [WARNING] shad.retrieval.qmd: qmd search timed out after 65s
+18:34:05 [INFO] shad.engine.rlm: [RETRIEVAL] Hybrid search empty, falling back to vector for: Define the evidence-summary criteria before inspection: requ...
+18:34:05 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for define_criteria: 20 keywords
+18:34:05 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+18:34:05 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+18:34:05 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Collect relevant evidence from the provided vault context an...
+18:34:08 [INFO] shad.engine.rlm: [RETRIEVAL] Found 1 results (hybrid+rerank+decay)
+18:34:08 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 243 chars of context
+18:34:08 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 243 chars for subtask: Define the evidence-summary criteria before inspec...
+18:34:08 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Define the evidence-summary criteria before inspection: required coverage categories are persistence...
+18:34:08 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 9576 chars
+18:34:08 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+18:34:51 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+18:34:51 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+18:34:51 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1466 chars of context
+18:34:51 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1466 chars for subtask: Collect relevant evidence from the provided vault ...
+18:34:51 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for define_criteria: 20 keywords
+18:34:51 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+18:34:51 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+18:34:51 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Collect relevant evidence from the provided vault context and, if available, repository metadata for...
+18:34:51 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 7450 chars
+18:34:51 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+18:37:47 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+18:37:47 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Document the evidence-gathering tradeoffs explicitly using t...
+18:37:47 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for gather_data: 20 keywords
+18:37:47 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+18:37:47 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+18:37:47 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: For each ambiguous module, enumerate plausible interpretatio...
+18:37:51 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+18:37:51 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1501 chars of context
+18:37:51 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1501 chars for subtask: Document the evidence-gathering tradeoffs explicit...
+18:37:51 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Document the evidence-gathering tradeoffs explicitly using the completed dependency context: compare...
+18:37:51 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 10834 chars
+18:37:51 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+18:38:45 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+18:38:45 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+18:38:45 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1589 chars of context
+18:38:45 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1589 chars for subtask: For each ambiguous module, enumerate plausible int...
+18:38:45 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for compare_alternatives: 20 keywords
+18:38:45 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+18:38:45 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+18:38:45 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: For each ambiguous module, enumerate plausible interpretations: authoritative implementation, genera...
+18:38:45 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 7573 chars
+18:38:45 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+18:41:18 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+18:41:18 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Collect concrete evidence from the repository and vault cont...
+18:41:18 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for compare_alternatives: 20 keywords
+18:41:18 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+18:41:18 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+18:41:18 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Evaluate each candidate module against the criteria and assi...
+18:41:23 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+18:41:23 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1598 chars of context
+18:41:23 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1598 chars for subtask: Collect concrete evidence from the repository and ...
+18:41:23 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Collect concrete evidence from the repository and vault context. Inspect the referenced Semantos fil...
+18:41:23 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 10931 chars
+18:41:23 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt

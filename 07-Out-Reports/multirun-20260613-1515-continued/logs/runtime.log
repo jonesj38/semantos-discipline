@@ -1,0 +1,116 @@
+[PROFILE] balanced preset applied (depth=3, nodes=45, time=3600s)
+╭────────────────────────────────── Shad Run ──────────────────────────────────╮
+│ Goal: Using the Semantos methodology, analyze runtime concepts and           │
+│ execution/data flow from source. Primary evidence: runtime/, core/cell*,     │
+│ cartridges/, db/, configs/, scripts, tests. Docs are secondary only.         │
+│                                                                              │
+│ Produce: runtime entrypoints/services, execution/cell/data-flow model as     │
+│ represented in code, concrete paths/symbols, Mermaid data/control-flow       │
+│ diagram, and future-agent cautions.                                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+[SOURCES] /home/jake/.edwinpai/disciplines/semantos/sources-code (CLI)
+16:16:48 [INFO] shad.retrieval: Using qmd retriever
+[RETRIEVER] Using QmdRetriever
+[QMD] Ensuring source collections are provisioned and indexed...
+16:16:48 [INFO] shad.retrieval.qmd: [QMD] Collection 'sources-code' already exists for /home/jake/.edwinpai/disciplines/semantos/sources-code
+16:16:54 [INFO] shad.retrieval.qmd: [QMD] Index updated successfully
+16:16:55 [INFO] shad.retrieval.qmd: [QMD] Incremental embedding complete
+[QMD] ✓ sources-code
+[QMD_HYBRID] Enabled - BM25 + vector + RRF fusion + reranking
+[STRATEGY] Override: analysis
+[VERIFY] Level: basic
+[PROVIDER] edwin-gateway
+[MODELS] Custom model selection:
+  Orchestrator: gpt-5.5
+  Worker: gpt-5.5
+  Leaf: gpt-5.5
+16:16:55 [INFO] shad.cache.redis_cache: Connected to Redis at redis://localhost:6379/0
+16:16:55 [INFO] shad.engine.llm: [LLM] Max concurrent calls resolved to 8 (requested=None, env=None)
+16:16:55 [INFO] shad.engine.rlm: [RETRIEVAL] Using QmdRetriever
+16:16:55 [INFO] shad.engine.rlm: [CODE_MODE] Initialized CodeExecutor with collection: /home/jake/.edwinpai/disciplines/semantos/sources-code, collection: sources-code
+16:16:55 [INFO] shad.refinement.manager: State transition: pending → running
+16:16:55 [INFO] shad.engine.rlm: Starting run e064ad8e-05f9-4f4a-b7b5-67e73feaf7bd with goal: Using the Semantos methodology, analyze runtime concepts and execution/data flow from source. Primary evidence: runtime/, core/cell*, cartridges/, db/, configs/, scripts, tests. Docs are secondary only.
+
+Produce: runtime entrypoints/services, execution/cell/data-flow model as represented in code, concrete paths/symbols, Mermaid data/control-flow diagram, and future-agent cautions.
+16:16:55 [INFO] shad.engine.rlm: [STRATEGY] Selected: analysis (confidence: 1.00, override: True)
+16:16:55 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: using the semantos methodology, analyze runtime concepts and...
+16:17:00 [INFO] shad.engine.rlm: [RETRIEVAL] Found 10 results (hybrid+rerank+decay)
+16:17:00 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 3092 chars of context
+16:17:00 [INFO] shad.engine.decomposition: [DECOMPOSE] Starting decomposition for: Using the Semantos methodology, analyze runtime concepts and execution/data flow from source. Primar...
+16:17:00 [INFO] shad.engine.decomposition: [DECOMPOSE] Strategy: analysis
+16:17:22 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+16:17:22 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+16:17:22 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+16:17:22 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Define the Semantos source-analysis criteria before reading ...
+16:17:27 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+16:17:27 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1607 chars of context
+16:17:27 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1607 chars for subtask: Define the Semantos source-analysis criteria befor...
+16:17:27 [INFO] shad.engine.decomposition: [DECOMPOSE] Starting decomposition for: Define the Semantos source-analysis criteria before reading code: identify runtime entrypoints/servi...
+16:17:27 [INFO] shad.engine.decomposition: [DECOMPOSE] Strategy: analysis
+16:17:51 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+16:17:51 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+16:17:51 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+16:17:51 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Define the Semantos source-analysis rubric before reading im...
+16:17:55 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+16:17:55 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1559 chars of context
+16:17:55 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1559 chars for subtask: Define the Semantos source-analysis rubric before ...
+16:17:55 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Define the Semantos source-analysis rubric before reading implementation code. Criteria must cover: ...
+16:17:55 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 6262 chars
+16:17:55 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+16:19:01 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+16:19:01 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for define_criteria: 20 keywords
+16:19:01 [INFO] shad.engine.rlm: [PARALLEL] Executing 2 nodes in parallel
+16:19:01 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 2 unique ready tasks
+16:19:01 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Document the tradeoff criteria for repository coverage strat...
+16:19:01 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Collect primary source evidence according to the rubric. Inv...
+16:19:04 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+16:19:04 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1546 chars of context
+16:19:05 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+16:19:05 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1506 chars of context
+16:19:05 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1506 chars for subtask: Collect primary source evidence according to the r...
+16:19:05 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1546 chars for subtask: Document the tradeoff criteria for repository cove...
+16:19:05 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Collect primary source evidence according to the rubric. Inventory relevant files under runtime/, co...
+16:19:05 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 6209 chars
+16:19:05 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+16:21:47 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+16:21:47 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Document the tradeoff criteria for repository coverage strategy before data gathering. Compare bread...
+16:21:47 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 6249 chars
+16:21:47 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+16:23:14 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+16:23:14 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for gather_data: 20 keywords
+16:23:14 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for compare_alternatives: 20 keywords
+16:23:14 [INFO] shad.engine.rlm: [PARALLEL] Executing 1 nodes in parallel
+16:23:14 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 1 unique ready tasks
+16:23:14 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Evaluate the gathered evidence against each criterion. Map r...
+16:23:24 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+16:23:24 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1601 chars of context
+16:23:24 [INFO] shad.engine.rlm: [CONTEXT] Injected 368 chars from soft deps: ['compare_alternatives']
+16:23:24 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1601 chars for subtask: Evaluate the gathered evidence against each criter...
+16:23:24 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Evaluate the gathered evidence against each criterion. Map runtime entrypoints and services; trace e...
+16:23:24 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 6674 chars
+16:23:24 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+16:25:49 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+16:25:49 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for analyze: 20 keywords
+16:25:49 [INFO] shad.engine.rlm: [PARALLEL] Executing 2 nodes in parallel
+16:25:49 [INFO] shad.engine.rlm: [PARALLEL] Prefetching retrieval context for 2 unique ready tasks
+16:25:49 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Create or specify diagrams that represent the analyzed Seman...
+16:25:49 [INFO] shad.engine.rlm: [RETRIEVAL] Using qmd hybrid search for: Produce the final criteria-and-methodology summary. Include ...
+16:25:52 [INFO] shad.engine.rlm: [RETRIEVAL] Found 1 results (hybrid+rerank+decay)
+16:25:52 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 253 chars of context
+16:25:53 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 results (hybrid+rerank+decay)
+16:25:53 [INFO] shad.engine.rlm: [RETRIEVAL] Retrieved 1494 chars of context
+16:25:53 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 253 chars for subtask: Produce the final criteria-and-methodology summary...
+16:25:53 [INFO] shad.engine.rlm: [CONTEXT] Retrieved 1494 chars for subtask: Create or specify diagrams that represent the anal...
+16:25:53 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Produce the final criteria-and-methodology summary. Include the explicit rubric, measurement rules, ...
+16:25:53 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 4956 chars
+16:25:53 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+16:27:29 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+16:27:29 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Create or specify diagrams that represent the analyzed Semantos runtime architecture: entrypoints/se...
+16:27:29 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 6197 chars
+16:27:29 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+16:29:28 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+16:29:28 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for conclude: 20 keywords
+16:29:28 [INFO] shad.engine.rlm: [CONTEXT_PACKET] Created packet for visualize: 20 keywords
+16:29:28 [INFO] shad.engine.llm: [SYNTHESIZE] Starting synthesis for: Define the Semantos source-analysis criteria before reading code: identify runtime entrypoints/servi...
+16:29:28 [INFO] shad.engine.llm: [SYNTHESIZE] Subtask results: 6
+16:29:28 [INFO] shad.engine.llm: [SYNTHESIZE] Context provided: 4701 chars

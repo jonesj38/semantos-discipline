@@ -1,0 +1,933 @@
+[PROFILE] deep preset applied
+╭──────────────────────────────── Shad Resume ─────────────────────────────────╮
+│ Resuming run 52037349-e86d-48b0-a4e2-a64dddbccd45                            │
+╰──────────────────────────────────────────────────────────────────────────────╯
+Using models: O=gpt-5.5, W=gpt-5.5, L=gpt-5.5
+16:32:50 [INFO] shad.engine.llm: [LLM] Max concurrent calls resolved to 8 (requested=None, env=None)
+16:32:50 [INFO] shad.retrieval: Using qmd retriever
+16:32:50 [INFO] shad.engine.rlm: [RETRIEVAL] Using QmdRetriever
+16:32:50 [INFO] shad.refinement.manager: State transition: pending → running
+16:32:50 [INFO] shad.engine.rlm: Resuming run 52037349-e86d-48b0-a4e2-a64dddbccd45
+16:32:50 [INFO] shad.engine.rlm: [RESUME] Found 6 pending nodes
+16:32:50 [INFO] shad.engine.rlm: [RESUME] Skipping 2 already-expanded pending internal nodes
+16:32:50 [INFO] shad.engine.rlm: [RESUME] Leaf nodes to replay: 4
+16:32:50 [INFO] shad.engine.rlm: [RESUME] Replaying leaf node 83d33953: Compare plausible interpretations of subsystem sta...
+16:32:50 [INFO] shad.engine.rlm: [RESUME] Retrieving context for node...
+16:32:50 [INFO] shad.engine.rlm: [RETRIEVAL] Direct search via QmdRetriever for keywords: ['compare', 'plausible', 'interpretations', 'subsystem', 'status', 'architecture', 'shape', 'methodology']
+16:32:51 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 unique results from 8 keyword searches
+16:32:51 [INFO] shad.engine.rlm: [RESUME] Got 2036 chars of context
+16:32:51 [INFO] shad.engine.rlm: [RESUME] Executing leaf directly without decomposition...
+16:32:51 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Compare plausible interpretations of subsystem status and architecture shape using the existing meth...
+16:32:51 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 2036 chars
+16:32:51 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+16:33:38 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+16:33:38 [INFO] shad.engine.rlm: [RESUME] Node complete: succeeded
+16:33:38 [INFO] shad.engine.rlm: [RESUME] Replaying leaf node a7381744: Evaluate gathered evidence against the criteria. B...
+16:33:38 [INFO] shad.engine.rlm: [RESUME] Retrieving context for node...
+16:33:38 [INFO] shad.engine.rlm: [RETRIEVAL] Direct search via QmdRetriever for keywords: ['evaluate', 'gathered', 'evidence', 'against', 'criteria', 'source', 'grounded', 'subsystem']
+16:33:39 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 unique results from 8 keyword searches
+16:33:39 [INFO] shad.engine.rlm: [RESUME] Got 1833 chars of context
+16:33:39 [INFO] shad.engine.rlm: [RESUME] Executing leaf directly without decomposition...
+16:33:39 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Evaluate gathered evidence against the criteria. Build a source-grounded subsystem map with each sub...
+16:33:39 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 1833 chars
+16:33:39 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+16:36:03 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+16:36:03 [INFO] shad.engine.rlm: [RESUME] Node complete: succeeded
+16:36:03 [INFO] shad.engine.rlm: [RESUME] Replaying leaf node 2b01a1f7: Create a Mermaid architecture diagram from the ana...
+16:36:03 [INFO] shad.engine.rlm: [RESUME] Retrieving context for node...
+16:36:03 [INFO] shad.engine.rlm: [RETRIEVAL] Direct search via QmdRetriever for keywords: ['mermaid', 'architecture', 'diagram', 'analyzed', 'subsystem', 'map', 'evidence', 'only']
+16:36:05 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 unique results from 8 keyword searches
+16:36:05 [INFO] shad.engine.rlm: [RESUME] Got 1592 chars of context
+16:36:05 [INFO] shad.engine.rlm: [RESUME] Executing leaf directly without decomposition...
+16:36:05 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Create a Mermaid architecture diagram from the analyzed subsystem map using evidence-only inclusion....
+16:36:05 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 1592 chars
+16:36:05 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+16:38:10 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+16:38:10 [INFO] shad.engine.rlm: [RESUME] Node complete: succeeded
+16:38:10 [INFO] shad.engine.rlm: [RESUME] Replaying leaf node bb7167a6: Produce the final concise architecture artifact: s...
+16:38:10 [INFO] shad.engine.rlm: [RESUME] Retrieving context for node...
+16:38:10 [INFO] shad.engine.rlm: [RETRIEVAL] Direct search via QmdRetriever for keywords: ['produce', 'final', 'concise', 'architecture', 'artifact', 'subsystem', 'map', 'active']
+16:38:12 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 unique results from 8 keyword searches
+16:38:12 [INFO] shad.engine.rlm: [RESUME] Got 1563 chars of context
+16:38:12 [INFO] shad.engine.rlm: [RESUME] Executing leaf directly without decomposition...
+16:38:12 [INFO] shad.engine.llm: [ANSWER_TASK] Starting task: Produce the final concise architecture artifact: subsystem map, active vs legacy/experimental caveat...
+16:38:12 [INFO] shad.engine.llm: [ANSWER_TASK] Context provided: 1563 chars
+16:38:12 [INFO] shad.engine.llm: [ANSWER_TASK] Including retrieved context in prompt
+16:40:36 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+16:40:36 [INFO] shad.engine.rlm: [RESUME] Node complete: succeeded
+16:40:36 [INFO] shad.engine.rlm: [RESUME] Synthesizing internal node 8b13fb37 from 6/6 successful children
+16:40:36 [INFO] shad.engine.rlm: [RETRIEVAL] Direct search via QmdRetriever for keywords: ['produce', 'concise', 'source', 'grounded', 'architecture', 'artifact', 'subsystem', 'map']
+16:40:38 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 unique results from 8 keyword searches
+16:40:38 [INFO] shad.engine.llm: [SYNTHESIZE] Starting synthesis for: Produce the concise source-grounded architecture artifact: subsystem map, active vs legacy/experimen...
+16:40:38 [INFO] shad.engine.llm: [SYNTHESIZE] Subtask results: 6
+16:40:38 [INFO] shad.engine.llm: [SYNTHESIZE] Context provided: 1579 chars
+16:42:32 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+16:42:32 [INFO] shad.engine.rlm: [RESUME] Synthesizing internal node 86fa1f2a from 6/6 successful children
+16:42:32 [INFO] shad.engine.rlm: [RETRIEVAL] Direct search via QmdRetriever for keywords: ['semantos', 'methodology', 'evidence', 'rules', 'analyze', 'repository', 'architecture', 'actual']
+16:42:33 [INFO] shad.engine.rlm: [RETRIEVAL] Found 5 unique results from 8 keyword searches
+16:42:33 [INFO] shad.engine.llm: [SYNTHESIZE] Starting synthesis for: Using the Semantos methodology in 01-Methodology/evidence-rules.md, analyze repository architecture ...
+16:42:33 [INFO] shad.engine.llm: [SYNTHESIZE] Subtask results: 6
+16:42:33 [INFO] shad.engine.llm: [SYNTHESIZE] Context provided: 1955 chars
+16:45:08 [INFO] httpx: HTTP Request: POST http://127.0.0.1:18789/v1/chat/completions "HTTP/1.1 200 OK"
+16:45:08 [INFO] shad.engine.rlm: [RESUME] Synthesized 2 internal nodes after leaf replay
+⠼ Complete
+16:45:08 [INFO] shad.history.manager: Saved run 52037349-e86d-48b0-a4e2-a64dddbccd45 to /home/jake/.shad/history/Runs/52037349-e86d-48b0-a4e2-a64dddbccd45
+
+Status: complete
+╭─────────────────────────────────── Result ───────────────────────────────────╮
+│ # Semantos Source-Grounded Architecture Artifact                             │
+│                                                                              │
+│ ## Executive summary                                                         │
+│                                                                              │
+│ Using the Semantos evidence methodology, the safest framing is:              │
+│                                                                              │
+│ > **Semantos-core is a polyglot, multi-layer semantic runtime/app/research   │
+│ monorepo. Its most source-grounded architecture is a TypeScript/Bun semantic │
+│ core and runtime stack, surrounded by Flutter/Dart app surfaces, cartridge   │
+│ packages, extraction/evidence tooling, SemanticFS/search behavior,           │
+│ semantic-object persistence, proof/compliance artifacts, and generated       │
+│ crystallization analytics.**                                                 │
+│                                                                              │
+│ The key caveat: **source snapshots are the territory; docs and               │
+│ crystallization outputs are maps.** Generated outputs such as                │
+│ `tools/crystallization/output/semantos-core.md/json` are useful for          │
+│ discovery, but they do not independently prove runtime implementation,       │
+│ active status, subsystem boundaries, or diagram edges [1][2][4].             │
+│                                                                              │
+│ Snapshot anchor reported by the subtasks:                                    │
+│                                                                              │
+│ - Repository:                                                                │
+│ `/home/jake/.edwinpai/disciplines/semantos/state/semantos-core-repo`         │
+│ - Commit: `02bc20b4e74610e49c746090d20c7f9a3bfda72b`                         │
+│ - Inventory artifact:                                                        │
+│ `/home/jake/.edwinpai/workspace/semantos-source-snapshot-inventory.md`       │
+│ [1][4]                                                                       │
+│                                                                              │
+│ Confidence is **medium-high** overall: package/source/test/proof evidence is │
+│ broad and convergent, but several higher-level product claims remain         │
+│ manifest-only, generated-summary-derived, partially shipped, or unverified   │
+│ by runtime callers [3][4].                                                   │
+│                                                                              │
+│ ---                                                                          │
+│                                                                              │
+│ ## Evidence rules applied                                                    │
+│                                                                              │
+│ This artifact follows the Semantos evidence rules from the methodology       │
+│ synthesis:                                                                   │
+│                                                                              │
+│ 1. **Primary evidence wins**                                                 │
+│    - Source files, tests, package manifests, configs, scripts, proof         │
+│ artifacts, and concrete imports/exports outrank docs and generated summaries │
+│ [1].                                                                         │
+│                                                                              │
+│ 2. **Docs are secondary**                                                    │
+│    - Docs and crystallization outputs guide discovery and interpretation     │
+│ only [1][4].                                                                 │
+│                                                                              │
+│ 3. **Active requires wiring**                                                │
+│    - A component is active only when supported by runtime/app/CLI wiring,    │
+│ package exports, imports, tests, scripts, or current manifests. Directory    │
+│ presence alone is insufficient [1][3].                                       │
+│                                                                              │
+│ 4. **Manifest evidence establishes boundaries, not full behavior**           │
+│    - `package.json` / `pubspec.yaml` files strongly prove package/app        │
+│ boundaries, but do not by themselves prove production execution [2][3][4].   │
+│                                                                              │
+│ 5. **Diagrams must encode uncertainty**                                      │
+│    - Runtime/data-flow edges and dependency edges should be visually         │
+│ distinct; active, legacy, experimental, and uncertain areas should be        │
+│ labeled [1][5].                                                              │
+│                                                                              │
+│ ---                                                                          │
+│                                                                              │
+│ ## Subsystem map                                                             │
+│                                                                              │
+│ | Subsystem | Status | Confidence | Role | Primary evidence | Caveat |       │
+│ |---|---:|---:|---|---|---|                                                  │
+│ | `apps/semantos` Flutter shell | Active-capable / manifest-confirmed |      │
+│ Medium | Unified shell app: operator identity, conversation engine, wallet   │
+│ lifecycle, device pairing, cartridge routing | `apps/semantos/pubspec.yaml`  │
+│ with dependencies on `semantos_core`, `cartridge_sdk`, `semantos_ffi`,       │
+│ `oddjobz_experience`, `betterment_experience`, `whisper_cpp`, `llama_cpp`,   │
+│ `web_socket_channel`, etc. [2][3] | Manifest proves app                      │
+│ boundary/dependencies, not all runtime behavior. |                           │
+│ | `runtime/shell` SemanticFS CLI | Active / implemented | High | CLI         │
+│ semantic filesystem commands |                                               │
+│ `runtime/shell/src/commands/fs.ts::handleFs(...)`; subcommands `ls`, `cat`,  │
+│ `stat`, `history`, `find`, `verify`, `search`; calls `fs.list`, `fs.get`,    │
+│ `fs.history`, `fs.findByContent`, `fs.queryByType`, `fs.verify`,             │
+│ `fs.semanticSearch` [2][3] | Broader production use beyond CLI command path  │
+│ not fully traced. |                                                          │
+│ | Semantic search / SemanticFS behavior | Active / tested | High |           │
+│ Embedding-backed semantic search over taxonomy-like object paths |           │
+│ `core/protocol-types/src/semantic-fs/__tests__/semantic-search.test.ts`;     │
+│ imports `embeddingPort`, `searchEmbedded`, `MemoryAdapter`, `CellStore`;     │
+│ tests provider absence, provider readiness, null embeddings, caller-supplied │
+│ embeddings, limits, sorting, path hits [2][3] | Test coverage is strong;     │
+│ implementation source beyond tests was not deeply expanded in the subtask    │
+│ results. |                                                                   │
+│ | `packages/extraction` | Implemented / likely active-adjacent | Medium-high │
+│ | Fetch → Parse → Typecheck → Infer → Commit semantic extraction pipeline |  │
+│ `packages/extraction/package.json`; `packages/extraction/src/index.ts`;      │
+│ `packages/extraction/src/stages.ts`; `packages/extraction/src/evidence.ts`;  │
+│ `packages/extraction/src/commit.ts`; exports `ExtractionPipeline`,           │
+│ `parseResponses`, `typecheckRecords`, `inferRecords`, `commitRecords`,       │
+│ `buildSourceKey` [2][6] | Strong package/source evidence, but top-level      │
+│ runtime caller not fully confirmed. |                                        │
+│ | Extraction evidence chain | Implemented | High | First-class evidence      │
+│ accumulation through extraction stages |                                     │
+│ `packages/extraction/src/evidence.ts::EvidenceAccumulator`, `addFetch`,      │
+│ `addParse`, `addTypecheck`, `addInference`, `addCommit`, `toArray` [2] |     │
+│ Runtime integration still needs caller tracing. |                            │
+│ | Extraction commit/idempotency | Implemented | High | Deduped semantic      │
+│ object creation/patching with persisted evidence |                           │
+│ `packages/extraction/src/commit.ts::commitRecords`,                          │
+│ `buildSourceKey(grammarId, sourceId)`, `BATCH_DEDUP_MAX = 10_000`,           │
+│ `store.lookupSourceKey`, `store.createObject`, `store.patchObject`,          │
+│ `store.writeEvidence` [2] | Proves commit behavior, not always-on execution. │
+│ |                                                                            │
+│ | `core/semantic-objects` | Package-confirmed / persistence substrate |      │
+│ Medium | Semantic object, patch, state, participant storage model |          │
+│ `core/semantic-objects/package.json`; description references `sem_objects`,  │
+│ `sem_object_patches`, `sem_object_states`, `sem_participants`; deps          │
+│ `drizzle-orm`, `postgres`; migration exports and `db:generate` script [2] |  │
+│ Manifest strongly proves boundary; storage APIs/runtime deployment require   │
+│ more source inspection. |                                                    │
+│ | `core/semantos-sir` | Package-confirmed compiler/semantic layer | Medium | │
+│ Semantic IR, SIR-to-OIR lowering, trust-tier enforcement |                   │
+│ `core/semantos-sir/package.json`; deps `@semantos/semantos-ir`,              │
+│ `@semantos/lexicon-core`, `@semantos/scg-relations` [2][3] | Manifest proves │
+│ package role/dependency direction; lowering implementation symbols not       │
+│ deeply inspected here. |                                                     │
+│ | `core/semantos-ir` | Package-confirmed compiler substrate | Medium | ANF   │
+│ IR for cell-engine constraint compiler / nanopass lower + emit pipeline |    │
+│ `core/semantos-ir/package.json`; exports `.`, `./expr`, `./types`; scripts   │
+│ `build`, `check`, `test` [2][3] | Active compiler invocation requires        │
+│ import/caller evidence beyond manifest. |                                    │
+│ | `cartridges/oddjobz/experience` | Active / manifest-confirmed cartridge |  │
+│ High | Oddjobz experience package for Semantos shell |                       │
+│ `cartridges/oddjobz/experience/pubspec.yaml`; implements `IntentGrammar`     │
+│ concepts `pay_milestone`, `transition_job`, `assign_worker`,                 │
+│ `request_quote`; depends on `semantos_core`, `cartridge_sdk`, `http`,        │
+│ `shared_preferences`; loaded by `apps/semantos` [2][3] | Strong cartridge    │
+│ boundary; full runtime flow still needs app source tracing. |                │
+│ | `cartridges/oddjobz/brain` | Active with legacy subcomponents | High for   │
+│ package boundary | Trades/services domain package with state machines,       │
+│ conversation DB, generated vectors, SIR/object dependencies |                │
+│ `cartridges/oddjobz/brain/package.json` cited in evaluation; dependencies    │
+│ include protocol/core packages, Drizzle/Postgres, Anthropic SDK, semantic    │
+│ objects, SIR, intent, SCG, conversation graph [3] | `legacy-ingest-bridge`   │
+│ is explicitly legacy inside otherwise active cartridge [3]. |                │
+│ | Oddjobz conversation analyzer/aggregate area | Implemented / tested in     │
+│ source snapshots | Medium-high | Conversation analysis / aggregation logic   │
+│ for Oddjobz domain | Retrieved source snapshots reference                    │
+│ `cartridges/oddjobz/brain/src/conversation/analyzer.ts` and tests            │
+│ `cartridges/oddjobz/brain/tests/conversation/analyzer.test.ts`; subtask [6]  │
+│ also cites aggregate/analyzer-style conversation artifacts [6] | Exact       │
+│ runtime caller remains unconfirmed in the synthesized evidence. |            │
+│ | `packages/cartridge_sdk` | Active | High | Flutter/platform cartridge      │
+│ interface | Direct dependency from `apps/semantos/pubspec.yaml` [3] | Active │
+│ by canonical app dependency; API details not inspected here. |               │
+│ | `packages/betterment_experience` | Active / app-loaded | High |            │
+│ Betterment/self-development experience package | Direct dependency from      │
+│ `apps/semantos/pubspec.yaml`; described as replacing older `self_experience` │
+│ [3] | Runtime behavior needs source-level inspection. |                      │
+│ | Betterment session FSM | Implemented source model / runtime wiring         │
+│ unconfirmed | Medium | Pure finite-state machine for practice sessions |     │
+│ `cartridges/betterment/brain/src/session_fsm.ts` with `SessionState`,        │
+│ `SessionEvent`, `SessionContext`, `GateFunctions`, `transition(...)` cited   │
+│ in [6] | Pure model; no inspected conductor/caller path. |                   │
+│ | `runtime/hrr-library` | Active / tested, production wiring medium | Strong │
+│ for tests | HRR memory/library subsystem | Tests import `IRBinding` from     │
+│ `@semantos/semantos-ir` and `encodePartialIntent` from `@semantos/hrr`;      │
+│ cover promotion, nearest lookup, capability projection, snapshot roundtrip   │
+│ [3] | Direct production invocation should still be confirmed. |              │
+│ | `runtime/semantos-brain` | Partially active / experimental/design-stage |  │
+│ Medium | Query, attention, ratify substrate, registries, operator            │
+│ confirmation | Design/source evidence indicates “PARTIALLY SHIPPED”          │
+│ primitives such as `cell.query`, `attention.poll`, registries [3] | Not      │
+│ every brain substrate claim is confirmed active runtime. |                   │
+│ | `runtime/node`, `runtime/services`, `runtime/session-protocol`,            │
+│ `runtime/verifier-sidecar`, `runtime/peer-locator` | Uncertain to            │
+│ active-adjacent | Low–Medium | Node/runtime/session/service boundaries |     │
+│ Mentioned via manifests and diagram evidence [3][5] | Need                   │
+│ entrypoint/import/startup tracing before high-confidence active claims. |    │
+│ | Cell engine proof artifacts | Experimental / proof-tracking | Medium |     │
+│ Kernel/cell-engine proof scenarios and binary identity |                     │
+│ `core/cell-engine/proof-artifacts/proof-4-of-7.json`; includes thesis,       │
+│ embedded binary profile, SHA256, scenarios; scenarios 5–7 marked `PENDING`   │
+│ [2][3][5] | Supports proof discipline, not full 7/7 completion or production │
+│ readiness. |                                                                 │
+│ | `proofs/compliance-matrix.json` / gates | Active compliance-support, path  │
+│ freshness caveat | Medium-high | Maps controls to invariants, tests, proofs, │
+│ fuzzing, manifests, assumptions | Compliance matrix and                      │
+│ `tests/gates/phase12-gate.test.ts` cited by subtasks [3][5] | Some           │
+│ referenced paths may have drift; generator/enforcement pipeline needs        │
+│ verification. |                                                              │
+│ | Pask analytics | Experimental / active-adjacent | Medium | Repo analytics  │
+│ / semantic tooling | `core/pask/scripts/repo-analytics.ts` delegates to      │
+│ `tools/release/bin/analytics.ts`; Pask appears in crystallization outputs    │
+│ [2][3] | Wrapper behavior proven; centrality/runtime role not proven. |      │
+│ | Pask vault adapters | Uncertain | Low–Medium | Notion/Obsidian vault       │
+│ adapters | `packages/pask-vault-obsidian/.../package.json` private package;  │
+│ depends on runtime services [2][5] | Runtime role needs import/caller        │
+│ confirmation. |                                                              │
+│ | `tools/crystallization` | Active as generated analytics; secondary for     │
+│ architecture proof | Medium | Concept/lifecycle/crystallization summaries |  │
+│ `tools/crystallization/output/semantos-core.md/json`,                        │
+│ `semantos-full.md/json`; generated around 84 concepts / 541 docs per subtask │
+│ evidence [2][3][4] | Discovery map only; cannot prove implementation or      │
+│ active subsystem status. |                                                   │
+│ | `configs/` | Likely active / uncertain | Medium-low | Extension/taxonomy   │
+│ config surfaces | Candidate configs referenced: `configs/extensions`,        │
+│ `configs/taxonomy`, `blockchain-risk`, taxonomy seeds [2][3] |               │
+│ Loader/runtime linkage not verified. |                                       │
+│ | `db/` | Active-adjacent / uncertain | Medium-low | DB/migration/storage    │
+│ area | Drizzle/Postgres dependencies in `semantic-objects` and Oddjobz;      │
+│ `db/postgres` referenced in evaluation [2][3] | Direct `db/` inspection and  │
+│ migration linkage incomplete. |                                              │
+│ | `scripts/` | Mixed / mostly dev-experimental | Low–Medium | Dev,           │
+│ analytics, smoke/test scripts | `core/pask/scripts/repo-analytics.ts`;       │
+│ `scripts/mnca-smoke`, script tests referenced [2][3] | Scripts encode        │
+│ assumptions but may not be runtime architecture. |                           │
+│ | `archive/*`, `jam_experience`, `tessera_experience` | Legacy | High |      │
+│ Archived/dead-end work | `archive/*`; `apps/semantos/pubspec.yaml` comments  │
+│ identify `jam_experience` and `tessera_experience` as archived dead-end      │
+│ cartridges not loaded by canonical shell [1][3] | Legacy classification is   │
+│ strong unless active imports contradict it. |                                │
+│ | `runtime/legacy-ingest` | Legacy/transitional | Medium | Older             │
+│ ingest/conversation model |                                                  │
+│ `runtime/legacy-ingest/src/conversation/types.ts`; `legacy-ingest-bridge` in │
+│ Oddjobz [3][6] | Active producer/caller not established. |                   │
+│                                                                              │
+│ ---                                                                          │
+│                                                                              │
+│ ## Active vs. legacy / experimental caveats                                  │
+│                                                                              │
+│ ### Strongest active source-backed areas                                     │
+│                                                                              │
+│ 1. **Semantic filesystem CLI**                                               │
+│    - `runtime/shell/src/commands/fs.ts::handleFs(...)`                       │
+│    - Commands: `ls`, `cat`, `stat`, `history`, `find`, `verify`, `search`    │
+│    - Delegates to `SemanticFS` methods including `semanticSearch` [2][3].    │
+│                                                                              │
+│ 2. **Semantic search behavior**                                              │
+│    - `core/protocol-types/src/semantic-fs/__tests__/semantic-search.test.ts` │
+│    - Tests cover provider absence/readiness, null embeddings,                │
+│ caller-supplied embeddings, result limits, sorting, and taxonomy-path        │
+│ matching [2][3].                                                             │
+│                                                                              │
+│ 3. **Extraction package and evidence/commit pipeline**                       │
+│    - `packages/extraction/src/index.ts`                                      │
+│    - `packages/extraction/src/stages.ts`                                     │
+│    - `packages/extraction/src/evidence.ts::EvidenceAccumulator`              │
+│    - `packages/extraction/src/commit.ts::commitRecords`, `buildSourceKey`    │
+│ [2][6].                                                                      │
+│                                                                              │
+│ 4. **Core package boundaries**                                               │
+│    - `core/semantos-ir/package.json`                                         │
+│    - `core/semantos-sir/package.json`                                        │
+│    - `core/semantic-objects/package.json`                                    │
+│    - Strong for package identity and dependency direction, medium for        │
+│ runtime activation [2][3].                                                   │
+│                                                                              │
+│ 5. **Flutter app and cartridges**                                            │
+│    - `apps/semantos/pubspec.yaml`                                            │
+│    - `cartridges/oddjobz/experience/pubspec.yaml`                            │
+│    - Strong for app/cartridge boundary and dependency composition; runtime   │
+│ source still needs deeper tracing [2][3].                                    │
+│                                                                              │
+│ ### Partially active / implemented but not fully runtime-proven              │
+│                                                                              │
+│ - `packages/extraction` — implemented package and commit/evidence flow, but  │
+│ no fully traced top-level runtime caller [2][6].                             │
+│ - `core/semantic-objects` — manifest and migration tooling prove storage     │
+│ substrate boundary, but storage API/runtime deployment needs inspection [2]. │
+│ - `core/semantos-sir` / `core/semantos-ir` — compiler/representation         │
+│ packages are clear, but active lowering/invocation paths need source-level   │
+│ call tracing [2][3].                                                         │
+│ - Betterment FSM — pure state model exists, but conductor/UI/runtime wiring  │
+│ not shown [6].                                                               │
+│ - Oddjobz conversation analysis/aggregate — implementation/test evidence     │
+│ exists, but live caller path remains a caveat [6].                           │
+│                                                                              │
+│ ### Experimental / research / proof-tracking                                 │
+│                                                                              │
+│ - `core/cell-engine/proof-artifacts/proof-4-of-7.json`                       │
+│   - Supports proof discipline and embedded binary tracking.                  │
+│   - Does **not** support “full proof complete” because scenarios 5–7 are     │
+│ marked `PENDING` [2][3][5].                                                  │
+│                                                                              │
+│ - `runtime/semantos-brain`                                                   │
+│   - Partially shipped substrate concepts exist, but some claims remain       │
+│ design-stage or migration-oriented [3].                                      │
+│                                                                              │
+│ - `tools/crystallization`                                                    │
+│   - Active as analysis tooling, but secondary for implementation claims      │
+│ [1][2][4].                                                                   │
+│                                                                              │
+│ - Pask / MNCA / late-emergence concepts                                      │
+│   - Architecturally meaningful, but runtime centrality is not proven by      │
+│ crystallization alone [3][4].                                                │
+│                                                                              │
+│ ### Legacy / dormant                                                         │
+│                                                                              │
+│ - `archive/*`                                                                │
+│ - `jam_experience`                                                           │
+│ - `tessera_experience`                                                       │
+│ - `runtime/legacy-ingest`                                                    │
+│ - Oddjobz `legacy-ingest-bridge`                                             │
+│ - Brain REPL legacy direct-dispatch fallback [3][6]                          │
+│                                                                              │
+│ These should not be drawn as active primary runtime paths unless future      │
+│ import/runtime evidence contradicts the current classification.              │
+│                                                                              │
+│ ---                                                                          │
+│                                                                              │
+│ ## Concrete source paths and symbols                                         │
+│                                                                              │
+│ ### Runtime shell / SemanticFS                                               │
+│                                                                              │
+│ - `runtime/shell/src/commands/fs.ts`                                         │
+│   - `handleFs(args, semanticFs)`                                             │
+│   - `handleLs`                                                               │
+│   - `handleCat`                                                              │
+│   - `handleStat`                                                             │
+│   - `handleHistory`                                                          │
+│   - `handleFind`                                                             │
+│   - `handleVerify`                                                           │
+│   - `handleSearch`                                                           │
+│   - Calls:                                                                   │
+│     - `fs.list`                                                              │
+│     - `fs.get`                                                               │
+│     - `fs.history`                                                           │
+│     - `fs.findByContent`                                                     │
+│     - `fs.queryByType`                                                       │
+│     - `fs.verify`                                                            │
+│     - `fs.semanticSearch` [2][3]                                             │
+│                                                                              │
+│ ### Semantic search tests                                                    │
+│                                                                              │
+│ - `core/protocol-types/src/semantic-fs/__tests__/semantic-search.test.ts`    │
+│   - `searchEmbedded`                                                         │
+│   - `embeddingPort`                                                          │
+│   - `MemoryAdapter`                                                          │
+│   - `CellStore`                                                              │
+│   - `makeEmbeddingStub`                                                      │
+│   - Tested behavior:                                                         │
+│     - no provider → `[]`                                                     │
+│     - provider not ready → `[]`                                              │
+│     - null embedding → `[]`                                                  │
+│     - supplied embedding overrides port                                      │
+│     - result limit                                                           │
+│     - descending score ordering                                              │
+│     - taxonomy path hits such as `objects/create/job/plumbing/job-1` [2]     │
+│                                                                              │
+│ ### Extraction package                                                       │
+│                                                                              │
+│ - `packages/extraction/package.json`                                         │
+│   - package: `@semantos/extraction`                                          │
+│   - description: “Semantic extraction pipeline: fetch, parse, typecheck,     │
+│ infer, commit”                                                               │
+│   - exports:                                                                 │
+│     - `.`                                                                    │
+│     - `./shell-handler`                                                      │
+│     - `./contracts`                                                          │
+│     - `./intent-adapters`                                                    │
+│   - deps:                                                                    │
+│     - `@anthropic-ai/sdk`                                                    │
+│     - `@semantos/intent`                                                     │
+│     - `@semantos/protocol-types`                                             │
+│     - `@semantos/runtime-services`                                           │
+│     - `@semantos/semantos-sir`                                               │
+│     - `@semantos/shell` [2]                                                  │
+│                                                                              │
+│ - `packages/extraction/src/index.ts`                                         │
+│   - `ExtractionPipeline`                                                     │
+│   - `selectFetchAdapter`                                                     │
+│   - `FetchAdapter`                                                           │
+│   - `RestFetchAdapter`                                                       │
+│   - `GraphQLFetchAdapter`                                                    │
+│   - `FileFetchAdapter`                                                       │
+│   - `StubFetchAdapter`                                                       │
+│   - `parseResponses`                                                         │
+│   - `typecheckRecords`                                                       │
+│   - `inferRecords`                                                           │
+│   - `commitRecords`                                                          │
+│   - `buildSourceKey`                                                         │
+│   - `autoGrammar`                                                            │
+│   - `wrapInManifest`                                                         │
+│   - `serialiseManifest` [2]                                                  │
+│                                                                              │
+│ - `packages/extraction/src/stages.ts`                                        │
+│   - `RawResponse`                                                            │
+│   - `IntermediateRecord`                                                     │
+│   - `ValidatedRecord`                                                        │
+│   - `InferredRecord`                                                         │
+│   - `ExtractedSemanticObject`                                                │
+│   - `TaxonomyCoordinate`                                                     │
+│   - `ConsumerBinding`                                                        │
+│   - `ExtractionContext`                                                      │
+│   - `ExtractionEvidence`                                                     │
+│   - `ExtractionResult`                                                       │
+│   - `ExtractionOptions`                                                      │
+│   - evidence stages: `fetch`, `parse`, `typecheck`, `infer`, `commit` [2]    │
+│                                                                              │
+│ - `packages/extraction/src/evidence.ts`                                      │
+│   - `EvidenceAccumulator`                                                    │
+│   - `addFetch`                                                               │
+│   - `addParse`                                                               │
+│   - `addTypecheck`                                                           │
+│   - `addInference`                                                           │
+│   - `addCommit`                                                              │
+│   - `toArray` [2]                                                            │
+│                                                                              │
+│ - `packages/extraction/src/commit.ts`                                        │
+│   - `commitRecords`                                                          │
+│   - `buildSourceKey(grammarId, sourceId)`                                    │
+│   - `BATCH_DEDUP_MAX = 10_000`                                               │
+│   - `store.lookupSourceKey`                                                  │
+│   - `store.createObject`                                                     │
+│   - `store.patchObject`                                                      │
+│   - `store.writeEvidence` [2]                                                │
+│                                                                              │
+│ ### Core semantic packages                                                   │
+│                                                                              │
+│ - `core/semantos-ir/package.json`                                            │
+│   - package: `@semantos/semantos-ir`                                         │
+│   - ANF intermediate representation                                          │
+│   - exports `.`, `./expr`, `./types`                                         │
+│   - scripts `build`, `check`, `test` [2]                                     │
+│                                                                              │
+│ - `core/semantos-sir/package.json`                                           │
+│   - package: `@semantos/semantos-sir`                                        │
+│   - Semantic IR / SIR-to-OIR lowering / trust-tier enforcement               │
+│   - deps:                                                                    │
+│     - `@semantos/semantos-ir`                                                │
+│     - `@semantos/lexicon-core`                                               │
+│     - `@semantos/scg-relations` [2][3]                                       │
+│                                                                              │
+│ - `core/semantic-objects/package.json`                                       │
+│   - package: `@semantos/semantic-objects`                                    │
+│   - canonical substrate:                                                     │
+│     - `sem_objects`                                                          │
+│     - `sem_object_patches`                                                   │
+│     - `sem_object_states`                                                    │
+│     - `sem_participants`                                                     │
+│   - deps:                                                                    │
+│     - `drizzle-orm`                                                          │
+│     - `postgres`                                                             │
+│   - tooling:                                                                 │
+│     - `@electric-sql/pglite`                                                 │
+│     - `drizzle-kit`                                                          │
+│     - `db:generate` [2]                                                      │
+│                                                                              │
+│ ### Apps and cartridges                                                      │
+│                                                                              │
+│ - `apps/semantos/pubspec.yaml`                                               │
+│   - Flutter app `semantos`                                                   │
+│   - declared responsibilities:                                               │
+│     - operator identity boot                                                 │
+│     - conversation engine                                                    │
+│     - wallet lifecycle                                                       │
+│     - device pairing handshake                                               │
+│     - cartridge routing                                                      │
+│   - deps:                                                                    │
+│     - `semantos_core`                                                        │
+│     - `cartridge_sdk`                                                        │
+│     - `semantos_ffi`                                                         │
+│     - `oddjobz_experience`                                                   │
+│     - `betterment_experience`                                                │
+│     - `whisper_cpp`                                                          │
+│     - `llama_cpp`                                                            │
+│     - `semantos_shell_native_identity`                                       │
+│     - `web_socket_channel`                                                   │
+│     - `idb_shim` [2][3]                                                      │
+│                                                                              │
+│ - `cartridges/oddjobz/experience/pubspec.yaml`                               │
+│   - package: `oddjobz_experience`                                            │
+│   - implements `IntentGrammar` concepts:                                     │
+│     - `pay_milestone`                                                        │
+│     - `transition_job`                                                       │
+│     - `assign_worker`                                                        │
+│     - `request_quote`                                                        │
+│   - deps:                                                                    │
+│     - `semantos_core`                                                        │
+│     - `cartridge_sdk`                                                        │
+│     - `http`                                                                 │
+│     - `shared_preferences`                                                   │
+│   - avoids direct shell/wallet implementation imports [2]                    │
+│                                                                              │
+│ - `cartridges/oddjobz/brain/src/conversation/analyzer.ts`                    │
+│   - retrieved source snapshot path for conversation analyzer                 │
+│                                                                              │
+│ - `cartridges/oddjobz/brain/tests/conversation/analyzer.test.ts`             │
+│   - retrieved test snapshot path for conversation analyzer                   │
+│                                                                              │
+│ ### Proof / compliance / tooling                                             │
+│                                                                              │
+│ - `core/cell-engine/proof-artifacts/proof-4-of-7.json`                       │
+│   - proof artifact with embedded binary profile, SHA256, scenarios           │
+│   - scenarios 5–7 marked `PENDING` [2][3][5]                                 │
+│                                                                              │
+│ - `tests/gates/phase12-gate.test.ts`                                         │
+│   - cited as supporting artifact/gate expectations around                    │
+│ proof/test/reproducibility [5]                                               │
+│                                                                              │
+│ - `proofs/compliance-matrix.json`                                            │
+│   - cited as mapping controls to invariants/proofs/tests/fuzzing/manifests,  │
+│ with path freshness caveats [3]                                              │
+│                                                                              │
+│ - `core/pask/scripts/repo-analytics.ts`                                      │
+│   - Bun wrapper delegating to `tools/release/bin/analytics.ts` via           │
+│ `spawnSync` [2]                                                              │
+│                                                                              │
+│ - `tools/crystallization/output/semantos-core.md/json`                       │
+│   - generated crystallization outputs; secondary-only for implementation     │
+│ proof [1][2][4]                                                              │
+│                                                                              │
+│ ---                                                                          │
+│                                                                              │
+│ ## Mermaid architecture diagram                                              │
+│                                                                              │
+│ ```mermaid                                                                   │
+│ flowchart LR                                                                 │
+│   %% Semantos source-grounded architecture map.                              │
+│   %% Solid arrows = runtime/data-flow or strongly supported source           │
+│ relationship.                                                                │
+│   %% Dotted arrows = package dependency, manifest relationship, or           │
+│ caveated/inferred relationship.                                              │
+│                                                                              │
+│   subgraph LEGEND[Legend]                                                    │
+│     LA[Active / source-backed]:::active                                      │
+│     LP[Partial / manifest-backed]:::partial                                  │
+│     LE[Experimental / proof or research-heavy]:::experimental                │
+│     LL[Legacy / compatibility]:::legacy                                      │
+│     LU[Uncertain / needs caller tracing]:::uncertain                         │
+│   end                                                                        │
+│                                                                              │
+│   subgraph APPS[Apps and cartridge surfaces]                                 │
+│     App[Flutter Semantos app\napps/semantos/pubspec.yaml]:::partial          │
+│     OddExp[Oddjobz                                                           │
+│ experience\ncartridges/oddjobz/experience/pubspec.yaml]:::active             │
+│     BetterExp[Betterment                                                     │
+│ experience\npackages/betterment_experience]:::active                         │
+│     CartridgeSDK[Cartridge SDK\npackages/cartridge_sdk]:::active             │
+│   end                                                                        │
+│                                                                              │
+│   subgraph RUNTIME[Runtime and shell layer]                                  │
+│     Shell[Semantic FS CLI\nruntime/shell/src/commands/fs.ts\nhandleFs(),     │
+│ handleSearch()]:::active                                                     │
+│     RuntimeServices[Runtime                                                  │
+│ services\n@semantos/runtime-services]:::uncertain                            │
+│     SessionProtocol[Session protocol]:::uncertain                            │
+│     VerifierSidecar[Verifier sidecar]:::uncertain                            │
+│     Brain[Semantos brain\nquery/attention/ratify substrate]:::experimental   │
+│     LegacyIngest[Legacy ingest\nruntime/legacy-ingest]:::legacy              │
+│   end                                                                        │
+│                                                                              │
+│   subgraph CORE[Semantic core and storage]                                   │
+│     ProtocolTypes[Protocol types\n@semantos/protocol-types]:::active         │
+│     SemanticSearch[Semantic search                                           │
+│ tests\nsemantic-search.test.ts\nsearchEmbedded(), embeddingPort]:::active    │
+│     SemanticObjects[Semantic                                                 │
+│ objects\ncore/semantic-objects/package.json\nDrizzle/Postgres                │
+│ substrate]:::partial                                                         │
+│     SIR[Semantos SIR\ncore/semantos-sir/package.json]:::partial              │
+│     IR[Semantos IR\ncore/semantos-ir/package.json]:::partial                 │
+│     Lexicon[Lexicon core]:::partial                                          │
+│     SCG[SCG relations]:::partial                                             │
+│     ConvGraph[Conversation graph]:::partial                                  │
+│   end                                                                        │
+│                                                                              │
+│   subgraph EXTRACTION[Extraction and evidence pipeline]                      │
+│     Extraction[Extraction package\npackages/extraction]:::partial            │
+│     Stages[Fetch / Parse / Typecheck / Infer / Commit\nstages.ts]:::active   │
+│     Evidence[EvidenceAccumulator\nevidence.ts]:::active                      │
+│     Commit[Commit/idempotency\ncommit.ts\ncommitRecords(),                   │
+│ buildSourceKey()]:::active                                                   │
+│   end                                                                        │
+│                                                                              │
+│   subgraph DOMAIN[Domain brains and FSMs]                                    │
+│     OddBrain[Oddjobz brain/conversation\nanalyzer / aggregate source +       │
+│ tests]:::active                                                              │
+│     BetterFSM[Betterment FSM\nsession_fsm.ts\ntransition()]:::partial        │
+│   end                                                                        │
+│                                                                              │
+│   subgraph TRUST_PROOF[Proof, trust, analytics, and tooling]                 │
+│     CellProof[Cell-engine proof artifacts\nproof-4-of-7.json\nscenarios 5-7  │
+│ PENDING]:::experimental                                                      │
+│     Compliance[Compliance matrix / gates\nproofs + tests/gates]:::partial    │
+│     Pask[Pask analytics                                                      │
+│ wrapper\ncore/pask/scripts/repo-analytics.ts]:::experimental                 │
+│     Crystallization[Crystallization                                          │
+│ outputs\ntools/crystallization/output/*.md,json\nsecondary                   │
+│ evidence]:::experimental                                                     │
+│   end                                                                        │
+│                                                                              │
+│   %% Stronger runtime/source relationships                                   │
+│   App --> Shell                                                              │
+│   App --> OddExp                                                             │
+│   App --> BetterExp                                                          │
+│   App --> CartridgeSDK                                                       │
+│                                                                              │
+│   Shell --> ProtocolTypes                                                    │
+│   Shell --> SemanticSearch                                                   │
+│                                                                              │
+│   SemanticSearch --> ProtocolTypes                                           │
+│                                                                              │
+│   Extraction --> Stages                                                      │
+│   Stages --> Evidence                                                        │
+│   Stages --> Commit                                                          │
+│   Commit --> SemanticObjects                                                 │
+│   Extraction --> SIR                                                         │
+│                                                                              │
+│   OddExp --> OddBrain                                                        │
+│   BetterExp --> BetterFSM                                                    │
+│   OddBrain --> SemanticObjects                                               │
+│   OddBrain --> SIR                                                           │
+│                                                                              │
+│   %% Package/dependency or inferred/caveated relationships                   │
+│   SIR -. depends on .-> IR                                                   │
+│   SIR -. depends on .-> Lexicon                                              │
+│   SIR -. depends on .-> SCG                                                  │
+│   ConvGraph -. graph relations over .-> SemanticObjects                      │
+│   Extraction -. package dep .-> RuntimeServices                              │
+│   Extraction -. package dep .-> Shell                                        │
+│   RuntimeServices -. sessions .-> SessionProtocol                            │
+│   SessionProtocol -. verification .-> VerifierSidecar                        │
+│   Brain -. partial substrate integration .-> RuntimeServices                 │
+│   LegacyIngest -. compatibility / historical path .-> OddBrain               │
+│   IR -. compiler/proof relation .-> CellProof                                │
+│   CellProof -. compliance support .-> Compliance                             │
+│   Pask -. delegates / analyzes .-> Crystallization                           │
+│   Crystallization -. discovery only, not proof .-> CORE                      │
+│                                                                              │
+│   classDef active                                                            │
+│ fill:#d9fbe3,stroke:#198754,stroke-width:2px,color:#0b2e13;                  │
+│   classDef partial                                                           │
+│ fill:#fff3cd,stroke:#f0ad00,stroke-width:2px,color:#4d3700;                  │
+│   classDef experimental                                                      │
+│ fill:#e7ddff,stroke:#6f42c1,stroke-width:2px,color:#2b164f;                  │
+│   classDef legacy                                                            │
+│ fill:#f1f3f5,stroke:#6c757d,stroke-width:2px,stroke-dasharray:5              │
+│ 4,color:#343a40;                                                             │
+│   classDef uncertain                                                         │
+│ fill:#fde2e1,stroke:#dc3545,stroke-width:2px,stroke-dasharray:3              │
+│ 3,color:#58151c;                                                             │
+│ ```                                                                          │
+│                                                                              │
+│ Diagram caveats:                                                             │
+│                                                                              │
+│ - This is **not** a complete static call graph [5].                          │
+│ - Solid arrows represent relationships with stronger source/test/runtime     │
+│ support.                                                                     │
+│ - Dotted arrows represent package dependencies, manifest-only relationships, │
+│ or inferred/caveated architecture.                                           │
+│ - Generated crystallization is included as an analytics/discovery subsystem, │
+│ not implementation proof [1][5].                                             │
+│ - Cell-engine proof artifacts are shown as experimental/proof-tracking       │
+│ because scenarios remain pending [2][5].                                     │
+│                                                                              │
+│ ---                                                                          │
+│                                                                              │
+│ ## Documented tradeoffs                                                      │
+│                                                                              │
+│ ### 1. Runtime-entrypoint view vs. package-dependency view                   │
+│                                                                              │
+│ **Package-dependency view** is strong for repo topology because package      │
+│ manifests and workspace files reveal boundaries and dependency direction     │
+│ [4].                                                                         │
+│ **Runtime-entrypoint view** is stronger for active behavior because it shows │
+│ what actually runs, e.g. `runtime/shell/src/commands/fs.ts` and semantic     │
+│ search tests [2][3][4].                                                      │
+│                                                                              │
+│ Decision: **Use runtime/source/test evidence for active claims; use          │
+│ manifests for subsystem boundaries** [1][4].                                 │
+│                                                                              │
+│ ---                                                                          │
+│                                                                              │
+│ ### 2. Monorepo structure vs. product subsystem structure                    │
+│                                                                              │
+│ The repository layout (`core/`, `runtime/`, `packages/`, `apps/`,            │
+│ `cartridges/`, `tools/`, `configs/`, `db/`, `scripts/`) is concrete and      │
+│ auditable [2][4].                                                            │
+│ But product subsystems span directories: for example, “SemanticFS/search”    │
+│ crosses `runtime/shell` and `core/protocol-types`; “extraction” crosses      │
+│ `packages/extraction`, `runtime-services`, `protocol-types`, and SIR [2][3]. │
+│                                                                              │
+│ Decision: **Present a product subsystem map, but cite concrete source paths  │
+│ for each subsystem** [4].                                                    │
+│                                                                              │
+│ ---                                                                          │
+│                                                                              │
+│ ### 3. Manifest evidence vs. implementation usage                            │
+│                                                                              │
+│ Manifests prove package identity, exports, scripts, dependencies, and app    │
+│ composition. They do not prove production/runtime execution [1][3][4].       │
+│                                                                              │
+│ Examples:                                                                    │
+│                                                                              │
+│ - `core/semantos-sir/package.json` proves SIR package boundary and           │
+│ dependency on IR, lexicon, SCG [2].                                          │
+│ - It does **not** prove every SIR lowering path is invoked by the app or     │
+│ runtime [6].                                                                 │
+│ - `apps/semantos/pubspec.yaml` proves the Flutter shell app declares         │
+│ cartridge, identity, LLM/STT, and FFI dependencies [2].                      │
+│ - It does **not** prove every declared dependency is exercised at runtime    │
+│ [3][6].                                                                      │
+│                                                                              │
+│ Decision: **Manifest-only components are “partial / manifest-confirmed”      │
+│ unless accompanied by source/test/runtime caller evidence** [1][3].          │
+│                                                                              │
+│ ---                                                                          │
+│                                                                              │
+│ ### 4. Proof artifacts vs. proof completion                                  │
+│                                                                              │
+│ `core/cell-engine/proof-artifacts/proof-4-of-7.json` is strong evidence that │
+│ proof tracking exists and includes binary identity details [2][5].           │
+│ But the same artifact marks scenarios 5–7 as `PENDING` [2][3][5].            │
+│                                                                              │
+│ Decision: **Classify cell-engine proof artifacts as                          │
+│ experimental/proof-tracking, not completed proof of full runtime             │
+│ capability** [3][5].                                                         │
+│                                                                              │
+│ ---                                                                          │
+│                                                                              │
+│ ### 5. Crystallization output vs. source snapshots                           │
+│                                                                              │
+│ Crystallization outputs identify concepts such as wallet, brain, intent,     │
+│ BSV, identity, certificate, Merkle, runtime, and API [2][4].                 │
+│ Some are corroborated by source; others remain conceptual or                 │
+│ generated-summary-derived [2][4].                                            │
+│                                                                              │
+│ Decision: **Use crystallization for discovery and conceptual framing only;   │
+│ final architectural claims require primary evidence** [1][4].                │
+│                                                                              │
+│ ---                                                                          │
+│                                                                              │
+│ ## What can be safely claimed                                                │
+│                                                                              │
+│ 1. **Semantos has a real semantic filesystem CLI surface.**                  │
+│    Evidence: `runtime/shell/src/commands/fs.ts::handleFs(...)` and           │
+│ subcommands over `SemanticFS` [2][3].                                        │
+│                                                                              │
+│ 2. **Semantic search behavior is tested and embedding-aware.**               │
+│    Evidence:                                                                 │
+│ `core/protocol-types/src/semantic-fs/__tests__/semantic-search.test.ts` [2]. │
+│                                                                              │
+│ 3. **Semantos has an implemented extraction pipeline with evidence tracking  │
+│ and commit/idempotency behavior.**                                           │
+│    Evidence: `packages/extraction/src/index.ts`, `stages.ts`, `evidence.ts`, │
+│ `commit.ts` [2][6].                                                          │
+│                                                                              │
+│ 4. **SIR, IR, and semantic objects are real package-level subsystems.**      │
+│    Evidence: `core/semantos-sir/package.json`,                               │
+│ `core/semantos-ir/package.json`, `core/semantic-objects/package.json`        │
+│ [2][3].                                                                      │
+│                                                                              │
+│ 5. **The Flutter Semantos app and cartridge model exist as declared          │
+│ app/package surfaces.**                                                      │
+│    Evidence: `apps/semantos/pubspec.yaml`,                                   │
+│ `cartridges/oddjobz/experience/pubspec.yaml` [2][3].                         │
+│                                                                              │
+│ 6. **Oddjobz and Betterment are active or active-adjacent                    │
+│ cartridge/application surfaces.**                                            │
+│    Evidence: app dependencies and cartridge manifests [2][3].                │
+│                                                                              │
+│ 7. **Proof/compliance artifacts are architecturally significant but          │
+│ incomplete.**                                                                │
+│    Evidence: `proof-4-of-7.json`, compliance/gate references; scenarios      │
+│ remain pending [2][3][5].                                                    │
+│                                                                              │
+│ 8. **Crystallization/Pask analytics exist, but are secondary for             │
+│ implementation status.**                                                     │
+│    Evidence: `tools/crystallization/output/*`,                               │
+│ `core/pask/scripts/repo-analytics.ts` [1][2][4].                             │
+│                                                                              │
+│ ---                                                                          │
+│                                                                              │
+│ ## What should not be claimed yet                                            │
+│                                                                              │
+│ - That every package in the monorepo is active in production.                │
+│ - That the Flutter app exercises every declared dependency path.             │
+│ - That SIR-to-OIR lowering is invoked by every extraction or cartridge flow. │
+│ - That Oddjobz conversation analysis emits a fully compiled SIR program      │
+│ unless source confirms that exact output [6].                                │
+│ - That Betterment FSM is wired into a live conductor/runtime [6].            │
+│ - That legacy ingest is part of the primary current ingestion path [3][6].   │
+│ - That cell-engine proof/compliance is complete end-to-end [2][3][5].        │
+│ - That generated crystallization concepts prove implementation centrality    │
+│ [1][4].                                                                      │
+│ - That `configs/` and `db/` are fully mapped; both remain under-inspected    │
+│ [2][3].                                                                      │
+│                                                                              │
+│ ---                                                                          │
+│                                                                              │
+│ ## Recommended next verification steps                                       │
+│                                                                              │
+│ To upgrade uncertain/partial claims:                                         │
+│                                                                              │
+│ 1. **Build an import graph**                                                 │
+│    - Trace callers of:                                                       │
+│      - `SemanticFS`                                                          │
+│      - `ExtractionPipeline`                                                  │
+│      - `commitRecords`                                                       │
+│      - `aggregateConversation` / conversation analyzer symbols               │
+│      - Betterment `transition`                                               │
+│      - SIR lowering APIs [2][3][6]                                           │
+│                                                                              │
+│ 2. **Inspect runtime entrypoints**                                           │
+│    - Shell CLI registry/router                                               │
+│    - `runtime/node` binaries                                                 │
+│    - `runtime/services` startup                                              │
+│    - session protocol / verifier sidecar integration [3][4]                  │
+│                                                                              │
+│ 3. **Inspect app source**                                                    │
+│    - `apps/semantos/lib/**`                                                  │
+│    - cartridge loading                                                       │
+│    - wallet lifecycle                                                        │
+│    - device pairing                                                          │
+│    - FFI / Whisper / Llama usage [2][3]                                      │
+│                                                                              │
+│ 4. **Verify proof/compliance pipeline**                                      │
+│    - Find generators for proof artifacts                                     │
+│    - Confirm CI/gate enforcement                                             │
+│    - Resolve path drift such as `packages/cell-engine` vs `core/cell-engine` │
+│ [3][5]                                                                       │
+│                                                                              │
+│ 5. **Inspect config and DB loaders**                                         │
+│    - `configs/extensions`                                                    │
+│    - `configs/taxonomy`                                                      │
+│    - `db/postgres`                                                           │
+│    - Drizzle schemas/migrations and runtime migration scripts [2][3]         │
+│                                                                              │
+│ 6. **Treat crystallization as a source map**                                 │
+│    - For every high-level concept from `tools/crystallization/output/*`,     │
+│ require a concrete source/test/manifest/proof citation before promoting it   │
+│ to an active subsystem [1][4].                                               │
+│                                                                              │
+│ ---                                                                          │
+│                                                                              │
+│ ## Bottom line                                                               │
+│                                                                              │
+│ Semantos-core is best described as an **evidence-grounded semantic           │
+│ runtime/app/research platform**. Its strongest confirmed spine is:           │
+│                                                                              │
+│ ```text                                                                      │
+│ Flutter/app + cartridge surfaces                                             │
+│ → runtime shell / SemanticFS                                                 │
+│ → protocol-types semantic search                                             │
+│ → extraction/evidence pipeline                                               │
+│ → semantic objects                                                           │
+│ → SIR / IR representation packages                                           │
+│ → proof/compliance and crystallization tooling                               │
+│ ```                                                                          │
+│                                                                              │
+│ But the repo also contains **legacy, experimental, generated, and partially  │
+│ wired architecture**. The final artifact should therefore remain a           │
+│ **confidence-labeled subsystem map**, not a flattened “everything is active” │
+│ architecture pitch [1][3][4].                                                │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+Run ID: 52037349-e86d-48b0-a4e2-a64dddbccd45

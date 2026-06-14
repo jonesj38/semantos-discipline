@@ -1,0 +1,4 @@
+[2026-06-13T15:15:32-06:00] START architecture
+[2026-06-13T16:16:47-06:00] PARTIAL_OR_FAILED architecture code=2 -> /home/jake/.edwinpai/disciplines/semantos/03-Analysis/architecture.md
+[2026-06-13T16:16:47-06:00] START runtime
+[manual] STOPPED after architecture partial; runtime killed to relaunch with bounded/shallow stage settings.
